@@ -1,0 +1,54 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" th:href="@{/css/fx.css}">
+    <script th:src="@{/webjars/jquery/3.5.1/jquery.min.js}"></script>
+    <script th:src="@{/js/fx.js}"></script>
+
+
+</head>
+<body>
+
+<div id="modalContainer" th:fragment="modal">
+    <div class="modal">
+        <div><div class="label1">ID</div><span id="tradeId" th:text="${trade?.id}"></span></div>
+        <div><div class="label1">取引日</div><input type="text" id="tradingDate" th:value="${trade?.tradingDateStr}"></div>
+        <div><div class="label1">決済日</div><input type="text" id="settlementDate" th:value="${trade?.settlementDateStr}"></div>
+        <div>
+            <div class="label1">通貨ペア</div>
+            <select id="currencyPair">
+                <option th:each="currencyPair : ${currencyPairs}"
+                        th:value="${currencyPair.id}"
+                        th:text="${currencyPair.currencyPair}"
+                        th:selected="${currencyPair.id == trade?.currencyPairId}">
+                </option>
+            </select>
+        </div>
+        <div>
+            <div class="label1">ask/bid</div>
+            <input type="radio" name="tradeType" value="1" th:checked="${trade?.tradeType == 1}">ask
+            <input type="radio" name="tradeType" value="2" th:checked="${trade?.tradeType == 2}">bid
+        </div>
+        <div><div class="label1">数量</div><input type="text" id="quantity" th:value="${trade?.quantity}"></div>
+        <div><div class="label1">Entry</div><input type="text" id="entryPrice" th:value="${trade?.entryPrice}"></div>
+        <div><div class="label1">Exit</div><input type="text" id="exitPrice" th:value="${trade?.exitPrice}"></div>
+        <div><div class="label1">S/L(pips)</div><input type="text" id="stopLoss" th:value="${trade?.stopLoss}"></div>
+        <div><div class="label1">損益</div><input type="text" id="profit" th:value="${trade?.profit}"></div>
+        <div><div class="label1">コメント</div><textarea cols=60 rows=10 id="comment">[[${trade?.comment}]]</textarea></div>
+        <div>
+            <div class="label1">画像</div><input type="text" id="img"><button id="addImageBtn">＋</button>
+            <!--
+            <span v-for="img in imageFiles">
+            <a v-bind:href="'upload/' + img" target="_blank">{{img}}</a>
+            <a href="#" v-on:click="deleteImage(img)">×</a>
+            &nbsp;&nbsp;
+            </span>
+            -->
+        </div>
+        <div style="margin-top: 10px"><button id="saveBtn">save</button></div>
+    </div>
+    <div class="overlay"></div>
+</div>
+
+
+</body>
+</html>

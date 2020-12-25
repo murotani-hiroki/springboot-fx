@@ -1,0 +1,33 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" th:href="@{/css/fx.css}">
+</head>
+<body>
+    <table th:fragment="trades" id="trade-list">
+        <th></th>
+        <th>取引日</th>
+        <th>決済日</th>
+        <th>通貨ペア</th>
+        <th>Ask/Bid</th>
+        <th>数量</th>
+        <th>Entry</th>
+        <th>Exit</th>
+        <th>S/L</th>
+        <th>損益</th>
+        <th><input type="checkbox" id="selectAll"></th>
+        <tr th:each="trade : ${trades}">
+            <td><a href="#" class="tradeId">[[${trade.id}]]</a></td>
+            <td th:text="${trade.tradingDateStr}"></td>
+            <td th:text="${trade.settlementDateStr}"></td>
+            <td th:text="${trade.currencyPair}"></td>
+            <td th:text="${trade.tradeTypeStr}"></td>
+            <td th:text="${trade.quantity}"></td>
+            <td th:text="${trade.entryPrice}"></td>
+            <td th:text="${trade.exitPrice}"></td>
+            <td th:text="${trade.stopLoss}"></td>
+            <td><span th:text="${trade.profit}" class="profit"></span></td>
+            <td><input type="checkbox" class="deleteId" th:value="${trade.id}"></td>
+        </tr>
+    </table>
+</body>
+</html>

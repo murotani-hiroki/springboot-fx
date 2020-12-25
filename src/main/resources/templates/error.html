@@ -1,0 +1,10 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <link rel="stylesheet" th:href="@{/css/fx.css}">
+</head>
+<body>
+    <div th:fragment="errors" id="errors">
+        <span th:each="error : ${errors}" th:text="${error}"></span>
+    </div>
+</body>
+</html>

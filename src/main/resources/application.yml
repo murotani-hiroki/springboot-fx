@@ -1,0 +1,19 @@
+spring:
+  jpa:
+    database: POSTGRESQL
+  #※これだと何故かうまくいかないので、DatabaseConfig.class で Datasourceをインジェクションしている
+  #datasource:
+    #driverClassName: org.postgresql.Driver
+    #url: jdbc:postgresql://127.0.0.1:15432/postgres
+    #username: postgres
+    #password: muro1968
+
+  #※MessageUtilに実装している
+  #messages:
+  #  basename: messages
+
+fxdb:
+  driverClassName: org.postgresql.Driver
+  url: jdbc:postgresql://127.0.0.1:15432/fxdb
+  username: postgres
+  password: muro1968
