@@ -1640,3 +1640,177 @@ Caused by: java.lang.NoClassDefFoundError: javax/el/ELManager
 2020-12-25 18:56:30.572[SpringContextShutdownHook][INFO ][org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] Closing JPA EntityManagerFactory for persistence unit 'default'
 2020-12-25 18:56:30.573[SpringContextShutdownHook][INFO ][com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
 2020-12-25 18:56:30.580[SpringContextShutdownHook][INFO ][com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+2020-12-25 22:49:09.327[restartedMain][INFO ][com.mrtn.fx.FxApplication] Starting FxApplication using Java 11.0.9.1 on macbook.local with PID 4157 (/Users/hmurotani/Documents/workspace/springboot-fx/out/production/classes started by hmurotani in /Users/hmurotani/Documents/workspace/springboot-fx)
+2020-12-25 22:49:09.327[restartedMain][INFO ][com.mrtn.fx.FxApplication] No active profile set, falling back to default profiles: default
+2020-12-25 22:49:09.572[restartedMain][WARN ][org.mybatis.spring.mapper.ClassPathMapperScanner] No MyBatis mapper was found in '[com.mrtn.fx]' package. Please check your configuration.
+2020-12-25 22:49:09.626[restartedMain][INFO ][org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port(s): 8080 (http)
+2020-12-25 22:49:09.627[restartedMain][INFO ][org.apache.coyote.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"]
+2020-12-25 22:49:09.627[restartedMain][INFO ][org.apache.catalina.core.StandardService] Starting service [Tomcat]
+2020-12-25 22:49:09.627[restartedMain][INFO ][org.apache.catalina.core.StandardEngine] Starting Servlet engine: [Apache Tomcat/9.0.41]
+2020-12-25 22:49:09.641[restartedMain][INFO ][org.apache.catalina.core.ContainerBase.[Tomcat-1].[localhost].[/]] Initializing Spring embedded WebApplicationContext
+2020-12-25 22:49:09.642[restartedMain][INFO ][org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 311 ms
+2020-12-25 22:49:09.699[restartedMain][INFO ][org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-25 22:49:09.751[restartedMain][WARN ][org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception; nested exception is org.springframework.boot.autoconfigure.jdbc.DataSourceProperties$DataSourceBeanCreationException: Failed to determine a suitable driver class
+2020-12-25 22:49:09.751[restartedMain][INFO ][org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-12-25 22:49:09.752[restartedMain][INFO ][org.apache.catalina.core.StandardService] Stopping service [Tomcat]
+2020-12-25 22:49:09.758[restartedMain][INFO ][org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-12-25 22:49:09.763[restartedMain][ERROR][org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
+
+Action:
+
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
+
+2020-12-25 22:49:11.612[restartedMain][INFO ][com.mrtn.fx.FxApplication] Starting FxApplication using Java 11.0.9.1 on macbook.local with PID 4157 (/Users/hmurotani/Documents/workspace/springboot-fx/out/production/classes started by hmurotani in /Users/hmurotani/Documents/workspace/springboot-fx)
+2020-12-25 22:49:11.613[restartedMain][INFO ][com.mrtn.fx.FxApplication] No active profile set, falling back to default profiles: default
+2020-12-25 22:49:11.863[restartedMain][WARN ][org.mybatis.spring.mapper.ClassPathMapperScanner] No MyBatis mapper was found in '[com.mrtn.fx]' package. Please check your configuration.
+2020-12-25 22:49:11.925[restartedMain][INFO ][org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port(s): 8080 (http)
+2020-12-25 22:49:11.926[restartedMain][INFO ][org.apache.coyote.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"]
+2020-12-25 22:49:11.926[restartedMain][INFO ][org.apache.catalina.core.StandardService] Starting service [Tomcat]
+2020-12-25 22:49:11.926[restartedMain][INFO ][org.apache.catalina.core.StandardEngine] Starting Servlet engine: [Apache Tomcat/9.0.41]
+2020-12-25 22:49:11.940[restartedMain][INFO ][org.apache.catalina.core.ContainerBase.[Tomcat-2].[localhost].[/]] Initializing Spring embedded WebApplicationContext
+2020-12-25 22:49:11.940[restartedMain][INFO ][org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 323 ms
+2020-12-25 22:49:11.952[restartedMain][WARN ][org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fxService' defined in file [/Users/hmurotani/Documents/workspace/springboot-fx/out/production/classes/com/mrtn/fx/service/FxService.class]: Post-processing of merged bean definition failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [com.mrtn.fx.service.FxService] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@54c537ca]
+2020-12-25 22:49:11.952[restartedMain][INFO ][org.apache.catalina.core.StandardService] Stopping service [Tomcat]
+2020-12-25 22:49:11.957[restartedMain][INFO ][org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-12-25 22:49:11.961[restartedMain][ERROR][org.springframework.boot.SpringApplication] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fxService' defined in file [/Users/hmurotani/Documents/workspace/springboot-fx/out/production/classes/com/mrtn/fx/service/FxService.class]: Post-processing of merged bean definition failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [com.mrtn.fx.service.FxService] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@54c537ca]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:586)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:923)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:588)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1309)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1298)
+	at com.mrtn.fx.FxApplication.main(FxApplication.java:10)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.mrtn.fx.service.FxService] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@54c537ca]
+	at org.springframework.util.ReflectionUtils.getDeclaredFields(ReflectionUtils.java:737)
+	at org.springframework.util.ReflectionUtils.doWithLocalFields(ReflectionUtils.java:669)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.buildResourceMetadata(CommonAnnotationBeanPostProcessor.java:366)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.findResourceMetadata(CommonAnnotationBeanPostProcessor.java:347)
+	at org.springframework.context.annotation.CommonAnnotationBeanPostProcessor.postProcessMergedBeanDefinition(CommonAnnotationBeanPostProcessor.java:295)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyMergedBeanDefinitionPostProcessors(AbstractAutowireCapableBeanFactory.java:1100)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:583)
+	... 21 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: org/springframework/data/jpa/repository/JpaRepository
+	at java.base/java.lang.ClassLoader.defineClass1(Native Method)
+	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1017)
+	at java.base/java.security.SecureClassLoader.defineClass(SecureClassLoader.java:174)
+	at java.base/java.net.URLClassLoader.defineClass(URLClassLoader.java:550)
+	at java.base/java.net.URLClassLoader$1.run(URLClassLoader.java:458)
+	at java.base/java.net.URLClassLoader$1.run(URLClassLoader.java:452)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/java.net.URLClassLoader.findClass(URLClassLoader.java:451)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.findClass(RestartClassLoader.java:159)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:141)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
+	at java.base/java.lang.Class.getDeclaredFields0(Native Method)
+	at java.base/java.lang.Class.privateGetDeclaredFields(Class.java:3061)
+	at java.base/java.lang.Class.getDeclaredFields(Class.java:2248)
+	at org.springframework.util.ReflectionUtils.getDeclaredFields(ReflectionUtils.java:732)
+	... 27 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.springframework.data.jpa.repository.JpaRepository
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581)
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
+	at java.base/java.lang.Class.forName0(Native Method)
+	at java.base/java.lang.Class.forName(Class.java:398)
+	at org.springframework.boot.devtools.restart.classloader.RestartClassLoader.loadClass(RestartClassLoader.java:144)
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
+	... 42 common frames omitted
+2020-12-25 22:49:28.191[background-preinit][INFO ][org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 6.1.6.Final
+2020-12-25 22:49:28.197[restartedMain][INFO ][com.mrtn.fx.FxApplication] Starting FxApplication using Java 11.0.9.1 on macbook.local with PID 4339 (/Users/hmurotani/Documents/workspace/springboot-fx/out/production/classes started by hmurotani in /Users/hmurotani/Documents/workspace/springboot-fx)
+2020-12-25 22:49:28.198[restartedMain][INFO ][com.mrtn.fx.FxApplication] No active profile set, falling back to default profiles: default
+2020-12-25 22:49:28.249[restartedMain][INFO ][org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-12-25 22:49:28.249[restartedMain][INFO ][org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-12-25 22:49:28.939[restartedMain][INFO ][org.springframework.data.repository.config.RepositoryConfigurationDelegate] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-12-25 22:49:28.999[restartedMain][INFO ][org.springframework.data.repository.config.RepositoryConfigurationDelegate] Finished Spring Data repository scanning in 51 ms. Found 2 JPA repository interfaces.
+2020-12-25 22:49:29.742[restartedMain][INFO ][org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port(s): 8080 (http)
+2020-12-25 22:49:29.755[restartedMain][INFO ][org.apache.coyote.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"]
+2020-12-25 22:49:29.756[restartedMain][INFO ][org.apache.catalina.core.StandardService] Starting service [Tomcat]
+2020-12-25 22:49:29.756[restartedMain][INFO ][org.apache.catalina.core.StandardEngine] Starting Servlet engine: [Apache Tomcat/9.0.41]
+2020-12-25 22:49:29.848[restartedMain][INFO ][org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring embedded WebApplicationContext
+2020-12-25 22:49:29.848[restartedMain][INFO ][org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 1598 ms
+2020-12-25 22:49:29.996[restartedMain][INFO ][com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+2020-12-25 22:49:30.140[restartedMain][INFO ][com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+2020-12-25 22:49:30.204[restartedMain][INFO ][org.hibernate.jpa.internal.util.LogHelper] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-12-25 22:49:30.269[restartedMain][INFO ][org.hibernate.Version] HHH000412: Hibernate ORM core version 5.4.25.Final
+2020-12-25 22:49:30.456[restartedMain][INFO ][org.hibernate.annotations.common.Version] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2020-12-25 22:49:30.574[restartedMain][INFO ][org.hibernate.dialect.Dialect] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2020-12-25 22:49:31.237[restartedMain][INFO ][org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-12-25 22:49:31.246[restartedMain][INFO ][org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-12-25 22:49:31.713[restartedMain][WARN ][org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-12-25 22:49:31.818[restartedMain][INFO ][org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-25 22:49:32.058[restartedMain][INFO ][org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] LiveReload server is running on port 35729
+2020-12-25 22:49:32.071[restartedMain][INFO ][org.apache.coyote.http11.Http11NioProtocol] Starting ProtocolHandler ["http-nio-8080"]
+2020-12-25 22:49:32.106[restartedMain][INFO ][org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port(s): 8080 (http) with context path ''
+2020-12-25 22:49:32.118[restartedMain][INFO ][com.mrtn.fx.FxApplication] Started FxApplication in 4.657 seconds (JVM running for 5.386)
+2020-12-25 22:49:38.277[http-nio-8080-exec-1][INFO ][org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-12-25 22:49:38.277[http-nio-8080-exec-1][INFO ][org.springframework.web.servlet.DispatcherServlet] Initializing Servlet 'dispatcherServlet'
+2020-12-25 22:49:38.279[http-nio-8080-exec-1][INFO ][org.springframework.web.servlet.DispatcherServlet] Completed initialization in 1 ms
+2020-12-25 22:49:38.786[http-nio-8080-exec-5][INFO ][com.mrtn.fx.web.FxController] --- search start ---
+2020-12-25 22:49:39.013[http-nio-8080-exec-5][INFO ][com.mrtn.fx.web.FxController] 検索結果 : 7件
+2020-12-25 22:49:39.014[http-nio-8080-exec-5][INFO ][com.mrtn.fx.web.FxController] --- search end ---
+2020-12-25 22:49:43.179[http-nio-8080-exec-6][INFO ][com.mrtn.fx.web.FxController] --- search start ---
+2020-12-25 22:49:43.192[http-nio-8080-exec-6][INFO ][com.mrtn.fx.web.FxController] 検索結果 : 3件
+2020-12-25 22:49:43.192[http-nio-8080-exec-6][INFO ][com.mrtn.fx.web.FxController] --- search end ---
+2020-12-25 22:49:45.110[http-nio-8080-exec-7][INFO ][com.mrtn.fx.web.FxController] --- search start ---
+2020-12-25 22:49:45.110[http-nio-8080-exec-7][INFO ][com.mrtn.fx.web.FxController] toDate : 検索条件Toは日付を入力してください。
+2020-12-25 22:49:48.043[http-nio-8080-exec-8][INFO ][com.mrtn.fx.web.FxController] --- edit start ---
+2020-12-25 22:49:48.067[http-nio-8080-exec-8][INFO ][com.mrtn.fx.web.FxController] 通貨ペア取得 : 9件
+2020-12-25 22:49:48.075[http-nio-8080-exec-8][INFO ][com.mrtn.fx.web.FxController] Trade取得 : 1件
+2020-12-25 22:49:48.075[http-nio-8080-exec-8][INFO ][com.mrtn.fx.web.FxController] --- edit end ---
+2020-12-25 22:49:51.635[http-nio-8080-exec-9][INFO ][com.mrtn.fx.web.FxController] --- save start ---
+2020-12-25 22:49:51.687[http-nio-8080-exec-9][INFO ][com.mrtn.fx.web.FxController] --- save end ---
+2020-12-25 22:49:53.060[http-nio-8080-exec-10][INFO ][com.mrtn.fx.web.FxController] --- search start ---
+2020-12-25 22:49:53.060[http-nio-8080-exec-10][INFO ][com.mrtn.fx.web.FxController] toDate : 検索条件Toは日付を入力してください。
+2020-12-25 22:49:59.103[http-nio-8080-exec-1][INFO ][com.mrtn.fx.web.FxController] --- edit start ---
+2020-12-25 22:49:59.111[http-nio-8080-exec-1][INFO ][com.mrtn.fx.web.FxController] 通貨ペア取得 : 9件
+2020-12-25 22:49:59.117[http-nio-8080-exec-1][INFO ][com.mrtn.fx.web.FxController] Trade取得 : 1件
+2020-12-25 22:49:59.117[http-nio-8080-exec-1][INFO ][com.mrtn.fx.web.FxController] --- edit end ---
+2020-12-25 22:50:04.073[http-nio-8080-exec-2][INFO ][com.mrtn.fx.web.FxController] --- save start ---
+2020-12-25 22:50:04.088[http-nio-8080-exec-2][INFO ][com.mrtn.fx.web.FxController] --- save end ---
+2020-12-25 22:50:05.642[http-nio-8080-exec-4][INFO ][com.mrtn.fx.web.FxController] --- search start ---
+2020-12-25 22:50:05.667[http-nio-8080-exec-4][INFO ][com.mrtn.fx.web.FxController] 検索結果 : 7件
+2020-12-25 22:50:05.667[http-nio-8080-exec-4][INFO ][com.mrtn.fx.web.FxController] --- search end ---
+2020-12-25 22:50:12.869[http-nio-8080-exec-3][INFO ][com.mrtn.fx.web.FxController] --- search start ---
+2020-12-25 22:50:12.869[http-nio-8080-exec-3][INFO ][com.mrtn.fx.web.FxController] fromDate : 検索条件Fromは日付を入力してください。
+2020-12-25 22:50:22.949[http-nio-8080-exec-5][INFO ][com.mrtn.fx.web.FxController] --- delete start ---
+2020-12-25 22:50:22.969[http-nio-8080-exec-5][INFO ][com.mrtn.fx.web.FxController] --- delete end ---
+2020-12-25 22:50:24.094[http-nio-8080-exec-6][INFO ][com.mrtn.fx.web.FxController] --- search start ---
+2020-12-25 22:50:24.113[http-nio-8080-exec-6][INFO ][com.mrtn.fx.web.FxController] 検索結果 : 6件
+2020-12-25 22:50:24.113[http-nio-8080-exec-6][INFO ][com.mrtn.fx.web.FxController] --- search end ---
+2020-12-25 22:50:29.349[SpringContextShutdownHook][INFO ][org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-12-25 22:50:29.351[SpringContextShutdownHook][INFO ][org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-12-25 22:50:29.352[SpringContextShutdownHook][INFO ][com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+2020-12-25 22:50:29.361[SpringContextShutdownHook][INFO ][com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
