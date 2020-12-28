@@ -1,9 +1,9 @@
 package com.mrtn.fx.service;
 
+import com.mrtn.fx.jpa.repository.CurrencyPairRepository;
+import com.mrtn.fx.jpa.repository.TradeRepository;
 import com.mrtn.fx.model.CurrencyPair;
 import com.mrtn.fx.model.Trade;
-import com.mrtn.fx.mybatis.repository.CurrencyPairRepository;
-import com.mrtn.fx.mybatis.repository.TradeRepository;
 import com.mrtn.fx.web.SaveForm;
 import com.mrtn.fx.web.SearchForm;
 import org.apache.logging.log4j.util.Strings;
@@ -20,14 +20,14 @@ import java.util.Date;
 import java.util.List;
 
 @Service
-public class FxService {
+public class FxServiceForJpa {
 
     /** TradeRepository */
-    @Autowired
+    //@Autowired
     private TradeRepository tradeRepository;
 
     /** CurrencyPairRepository */
-    @Autowired
+    //@Autowired
     private CurrencyPairRepository currencyPairRepository;
 
     /** ModelMapper */
@@ -44,11 +44,25 @@ public class FxService {
     public List<Trade> search(SearchForm form) {
         //TODO formはDTOに移す。
         // From To の指定が無ければ、Min値 Max値 で検索する。
-        String fromDate = Strings.isNotBlank(form.getFromDate()) ? form.getFromDate() : "1970-01-01";
-        String toDate = Strings.isNotBlank(form.getToDate()) ? form.getToDate() : "9999-12-31";
+        String fromDateStr = Strings.isNotBlank(form.getFromDate()) ? form.getFromDate() : "1970-01-01";
+        String toDateStr = Strings.isNotBlank(form.getToDate()) ? form.getToDate() : "9999-12-31";
+        Date fromDate = null;
+        Date toDate = null;
+        try {
+            // 日付フォーマットを yyyy-MM-dd に統一してDateを生成する。
+            fromDate = formatter.parse(unifyDateFormat(fromDateStr));
+            toDate = formatter.parse(unifyDateFormat(toDateStr));
+        } catch (ParseException e) {
+            throw new RuntimeException("日付の入力が不正です。", e);
+        }
         List<Trade> results = new ArrayList<>();
-        tradeRepository.findByTradingDate(fromDate, toDate).forEach(entity -> {
-            results.add(modelMapper.map(entity, Trade.class));
+        //tradeRepository.findAll().forEach(entity -> {
+        tradeRepository.findByTradingDateBetweenOrderByTradingDate(fromDate, toDate).forEach(entity -> {
+            Trade trade = modelMapper.map(entity, Trade.class);
+            trade.setCurrencyPairId(entity.getCurrencyPair().getId());
+            trade.setCurrencyPair(entity.getCurrencyPair().getCurrencyPair());
+            //trade.setTradeType(TradeType.valueOf(entity.getTradeType()).toString());
+            results.add(trade);
         });
         return results;
     }
@@ -59,7 +73,8 @@ public class FxService {
      * @return 検索結果
      */
     public Trade find(Integer id) {
-        /*
+        /* jpa版コメント化
+        com.mrtn.fx.jpa.entity.Trade trade = tradeRepository.findById(id).get();
         com.mrtn.fx.jpa.entity.Trade trade = tradeRepository.findById(id).get();
         Trade result = modelMapper.map(trade, Trade.class);
         return result;
@@ -72,10 +87,13 @@ public class FxService {
      * @return 通貨ペア一覧
      */
     public List<CurrencyPair> getCurrencyPairs() {
+        /* jpa版コメント化
         List<CurrencyPair> results = new ArrayList<>();
         currencyPairRepository.findAll().forEach(
                 entity -> results.add(modelMapper.map(entity, CurrencyPair.class)));
         return results;
+         */
+        return null;
     }
 
     /**
@@ -98,9 +116,11 @@ public class FxService {
                 }
             }
         });
-        com.mrtn.fx.jpa.entity.Trade trade = modelMapper.map(form, com.mrtn.fx.jpa.entity.Trade.class);
 
-        //tradeRepository.save(trade);
+        /* jpa版コメント化
+        com.mrtn.fx.jpa.entity.Trade trade = modelMapper.map(form, com.mrtn.fx.jpa.entity.Trade.class);
+        tradeRepository.save(trade);
+         */
     }
 
     /**
@@ -120,8 +140,10 @@ public class FxService {
      * @return 検索結果
      */
     public void delete(String[] deleteIds) {
+        /* jpa版コメント化
         for (String id : deleteIds) {
-            //tradeRepository.deleteById(Integer.valueOf(id));
+            tradeRepository.deleteById(Integer.valueOf(id));
         }
+        */
     }
 }

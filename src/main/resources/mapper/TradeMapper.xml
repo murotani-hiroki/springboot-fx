@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mrtn.fx.mybatis.repository.TradeRepository">
+    <select id="findByTradingDate" resultType="com.mrtn.fx.mybatis.entity.Trade">
+        SELECT
+            *
+        FROM
+            trade
+        ORDER BY
+            trading_date
+    </select>
+</mapper>
+

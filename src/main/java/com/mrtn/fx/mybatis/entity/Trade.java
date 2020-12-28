@@ -1,21 +1,13 @@
-package com.mrtn.fx.jpa.entity;
+package com.mrtn.fx.mybatis.entity;
 
 import lombok.Data;
 
 import java.util.Date;
 
 @Data
-/* jpa版コメント化
-@Entity
-@Table(name = "trade")
-*/
 public class Trade {
 
     /** ID */
-    /* jpa版コメント化
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    */
     private Integer id;
 
     /** 取引日 */
@@ -25,17 +17,12 @@ public class Trade {
     private Date settlementDate;
 
     /** 通貨ペアID */
-    //private Integer currencyPairId;
+    private Integer currencyPairId;
 
     /** 通貨ペア */
-    /* jpa版コメント化
-    @ManyToOne
-    @JoinColumn(name = "currency_pair_id")
-    */
-    private CurrencyPair currencyPair;
+    private String currencyPair;
 
     /** Ask/Bid */
-    //TODO enum化する。
     private Integer tradeType;
 
     /** 数量 */
