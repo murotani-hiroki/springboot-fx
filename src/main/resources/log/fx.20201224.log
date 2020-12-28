@@ -647,7 +647,7 @@ Consider the following:
 2020-12-24 13:36:16.443[restartedMain][INFO ][org.hibernate.dialect.Dialect] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
 2020-12-24 13:36:16.573[restartedMain][INFO ][org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
 2020-12-24 13:36:16.573[restartedMain][INFO ][org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-12-24 13:36:16.587[restartedMain][WARN ][org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fxService': Lookup method resolution failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [com.mrtn.fx.service.FxService] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@24a6940c]
+2020-12-24 13:36:16.587[restartedMain][WARN ][org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fxService': Lookup method resolution failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [com.mrtn.fx.service.FxServiceForMyBatis] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@24a6940c]
 2020-12-24 13:36:16.588[restartedMain][INFO ][org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] Closing JPA EntityManagerFactory for persistence unit 'default'
 2020-12-24 13:36:16.588[restartedMain][INFO ][com.zaxxer.hikari.HikariDataSource] HikariPool-5 - Shutdown initiated...
 2020-12-24 13:36:16.606[restartedMain][INFO ][com.zaxxer.hikari.HikariDataSource] HikariPool-5 - Shutdown completed.
@@ -656,7 +656,7 @@ Consider the following:
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
 2020-12-24 13:36:16.628[restartedMain][ERROR][org.springframework.boot.SpringApplication] Application run failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fxService': Lookup method resolution failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [com.mrtn.fx.service.FxService] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@24a6940c]
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fxService': Lookup method resolution failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [com.mrtn.fx.service.FxServiceForMyBatis] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@24a6940c]
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:289)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1286)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1203)
@@ -682,7 +682,7 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
 	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
-Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.mrtn.fx.service.FxService] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@24a6940c]
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.mrtn.fx.service.FxServiceForMyBatis] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@24a6940c]
 	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:481)
 	at org.springframework.util.ReflectionUtils.doWithLocalMethods(ReflectionUtils.java:321)
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:267)
@@ -786,7 +786,7 @@ Caused by: java.lang.ClassNotFoundException: com.mrtn.fx.web.SaveForm
 2020-12-24 13:44:44.266[restartedMain][INFO ][org.hibernate.dialect.Dialect] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
 2020-12-24 13:44:44.336[restartedMain][INFO ][org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
 2020-12-24 13:44:44.336[restartedMain][INFO ][org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-12-24 13:44:44.344[restartedMain][WARN ][org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fxService': Lookup method resolution failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [com.mrtn.fx.service.FxService] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@d303787]
+2020-12-24 13:44:44.344[restartedMain][WARN ][org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fxService': Lookup method resolution failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [com.mrtn.fx.service.FxServiceForMyBatis] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@d303787]
 2020-12-24 13:44:44.344[restartedMain][INFO ][org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] Closing JPA EntityManagerFactory for persistence unit 'default'
 2020-12-24 13:44:44.344[restartedMain][INFO ][com.zaxxer.hikari.HikariDataSource] HikariPool-8 - Shutdown initiated...
 2020-12-24 13:44:44.345[restartedMain][INFO ][com.zaxxer.hikari.HikariDataSource] HikariPool-8 - Shutdown completed.
@@ -795,7 +795,7 @@ Caused by: java.lang.ClassNotFoundException: com.mrtn.fx.web.SaveForm
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
 2020-12-24 13:44:44.354[restartedMain][ERROR][org.springframework.boot.SpringApplication] Application run failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fxService': Lookup method resolution failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [com.mrtn.fx.service.FxService] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@d303787]
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fxService': Lookup method resolution failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [com.mrtn.fx.service.FxServiceForMyBatis] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@d303787]
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:289)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1286)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1203)
@@ -821,7 +821,7 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
 	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
-Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.mrtn.fx.service.FxService] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@d303787]
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.mrtn.fx.service.FxServiceForMyBatis] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@d303787]
 	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:481)
 	at org.springframework.util.ReflectionUtils.doWithLocalMethods(ReflectionUtils.java:321)
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:267)
@@ -1121,7 +1121,7 @@ Caused by: org.modelmapper.MappingException: ModelMapper mapping errors:
 	at org.modelmapper.internal.MappingEngineImpl.map(MappingEngineImpl.java:72)
 	at org.modelmapper.ModelMapper.mapInternal(ModelMapper.java:573)
 	at org.modelmapper.ModelMapper.map(ModelMapper.java:406)
-	at com.mrtn.fx.service.FxService.save(FxService.java:80)
+	at com.mrtn.fx.service.FxServiceForMyBatis.save(FxService.java:80)
 	at com.mrtn.fx.web.FxController.save(FxController.java:142)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -1193,7 +1193,7 @@ Caused by: org.modelmapper.MappingException: ModelMapper mapping errors:
 	at org.modelmapper.internal.MappingEngineImpl.map(MappingEngineImpl.java:72)
 	at org.modelmapper.ModelMapper.mapInternal(ModelMapper.java:573)
 	at org.modelmapper.ModelMapper.map(ModelMapper.java:406)
-	at com.mrtn.fx.service.FxService.save(FxService.java:80)
+	at com.mrtn.fx.service.FxServiceForMyBatis.save(FxService.java:80)
 	at com.mrtn.fx.web.FxController.save(FxController.java:142)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -1268,7 +1268,7 @@ Caused by: org.modelmapper.MappingException: ModelMapper mapping errors:
 	at org.modelmapper.internal.MappingEngineImpl.map(MappingEngineImpl.java:72)
 	at org.modelmapper.ModelMapper.mapInternal(ModelMapper.java:573)
 	at org.modelmapper.ModelMapper.map(ModelMapper.java:406)
-	at com.mrtn.fx.service.FxService.save(FxService.java:80)
+	at com.mrtn.fx.service.FxServiceForMyBatis.save(FxService.java:80)
 	at com.mrtn.fx.web.FxController.save(FxController.java:142)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -1340,7 +1340,7 @@ Caused by: org.modelmapper.MappingException: ModelMapper mapping errors:
 	at org.modelmapper.internal.MappingEngineImpl.map(MappingEngineImpl.java:72)
 	at org.modelmapper.ModelMapper.mapInternal(ModelMapper.java:573)
 	at org.modelmapper.ModelMapper.map(ModelMapper.java:406)
-	at com.mrtn.fx.service.FxService.save(FxService.java:80)
+	at com.mrtn.fx.service.FxServiceForMyBatis.save(FxService.java:80)
 	at com.mrtn.fx.web.FxController.save(FxController.java:142)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -1398,7 +1398,7 @@ Caused by: org.modelmapper.MappingException: ModelMapper mapping errors:
 	at org.modelmapper.internal.MappingEngineImpl.map(MappingEngineImpl.java:81)
 	at org.modelmapper.ModelMapper.mapInternal(ModelMapper.java:573)
 	at org.modelmapper.ModelMapper.map(ModelMapper.java:406)
-	at com.mrtn.fx.service.FxService.save(FxService.java:80)
+	at com.mrtn.fx.service.FxServiceForMyBatis.save(FxService.java:80)
 	at com.mrtn.fx.web.FxController.save(FxController.java:142)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -3146,7 +3146,7 @@ Caused by: java.lang.NoClassDefFoundError: Lcom/mrtn/fx/service/FxService;
 	at java.base/java.lang.Class.getDeclaredFields(Class.java:2248)
 	at org.springframework.util.ReflectionUtils.getDeclaredFields(ReflectionUtils.java:732)
 	... 27 common frames omitted
-Caused by: java.lang.ClassNotFoundException: com.mrtn.fx.service.FxService
+Caused by: java.lang.ClassNotFoundException: com.mrtn.fx.service.FxServiceForMyBatis
 	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581)
 	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
@@ -3218,7 +3218,7 @@ Caused by: java.lang.NoClassDefFoundError: Lcom/mrtn/fx/service/FxService;
 	at java.base/java.lang.Class.getDeclaredFields(Class.java:2248)
 	at org.springframework.util.ReflectionUtils.getDeclaredFields(ReflectionUtils.java:732)
 	... 27 common frames omitted
-Caused by: java.lang.ClassNotFoundException: com.mrtn.fx.service.FxService
+Caused by: java.lang.ClassNotFoundException: com.mrtn.fx.service.FxServiceForMyBatis
 	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581)
 	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
@@ -3542,7 +3542,7 @@ Consider the following:
 2020-12-24 20:45:40.512[http-nio-8080-exec-7][ERROR][org.apache.catalina.core.ContainerBase.[Tomcat-1].[localhost].[/].[dispatcherServlet]] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.lang.RuntimeException: 日付の入力が不正です。] with root cause
 java.text.ParseException: Unparseable date: "2020/12/19"
 	at java.base/java.text.DateFormat.parse(DateFormat.java:395)
-	at com.mrtn.fx.service.FxService.search(FxService.java:51)
+	at com.mrtn.fx.service.FxServiceForMyBatis.search(FxService.java:51)
 	at com.mrtn.fx.web.FxController.search(FxController.java:57)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -3814,7 +3814,7 @@ Caused by: java.lang.ClassNotFoundException: com.mrtn.fx.web.SearchForm
 2020-12-24 21:49:03.429[restartedMain][INFO ][org.hibernate.dialect.Dialect] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
 2020-12-24 21:49:03.530[restartedMain][INFO ][org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
 2020-12-24 21:49:03.530[restartedMain][INFO ][org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-12-24 21:49:03.556[restartedMain][WARN ][org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fxService': Lookup method resolution failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [com.mrtn.fx.service.FxService] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@3b8eb77c]
+2020-12-24 21:49:03.556[restartedMain][WARN ][org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fxService': Lookup method resolution failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [com.mrtn.fx.service.FxServiceForMyBatis] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@3b8eb77c]
 2020-12-24 21:49:03.557[restartedMain][INFO ][org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] Closing JPA EntityManagerFactory for persistence unit 'default'
 2020-12-24 21:49:03.558[restartedMain][INFO ][com.zaxxer.hikari.HikariDataSource] HikariPool-12 - Shutdown initiated...
 2020-12-24 21:49:03.577[restartedMain][INFO ][com.zaxxer.hikari.HikariDataSource] HikariPool-12 - Shutdown completed.
@@ -3823,7 +3823,7 @@ Caused by: java.lang.ClassNotFoundException: com.mrtn.fx.web.SearchForm
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
 2020-12-24 21:49:03.593[restartedMain][ERROR][org.springframework.boot.SpringApplication] Application run failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fxService': Lookup method resolution failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [com.mrtn.fx.service.FxService] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@3b8eb77c]
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fxService': Lookup method resolution failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [com.mrtn.fx.service.FxServiceForMyBatis] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@3b8eb77c]
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:289)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1286)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1203)
@@ -3849,7 +3849,7 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
 	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
-Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.mrtn.fx.service.FxService] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@3b8eb77c]
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.mrtn.fx.service.FxServiceForMyBatis] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@3b8eb77c]
 	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:481)
 	at org.springframework.util.ReflectionUtils.doWithLocalMethods(ReflectionUtils.java:321)
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:267)

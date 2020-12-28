@@ -126,7 +126,7 @@
 2020-12-22 14:15:09.227[restartedMain][INFO ][org.hibernate.dialect.Dialect] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
 2020-12-22 14:15:09.332[restartedMain][INFO ][org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
 2020-12-22 14:15:09.333[restartedMain][INFO ][org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-12-22 14:15:09.350[restartedMain][WARN ][org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'fxController': Unsatisfied dependency expressed through field 'fxService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.mrtn.fx.service.FxService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2020-12-22 14:15:09.350[restartedMain][WARN ][org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'fxController': Unsatisfied dependency expressed through field 'fxService'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.mrtn.fx.service.FxServiceForMyBatis' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
 2020-12-22 14:15:09.350[restartedMain][INFO ][org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] Closing JPA EntityManagerFactory for persistence unit 'default'
 2020-12-22 14:15:09.351[restartedMain][INFO ][com.zaxxer.hikari.HikariDataSource] HikariPool-4 - Shutdown initiated...
 2020-12-22 14:15:09.376[restartedMain][INFO ][com.zaxxer.hikari.HikariDataSource] HikariPool-4 - Shutdown completed.
@@ -142,7 +142,7 @@ APPLICATION FAILED TO START
 
 Description:
 
-Field fxService in com.mrtn.fx.web.FxController required a bean of type 'com.mrtn.fx.service.FxService' that could not be found.
+Field fxService in com.mrtn.fx.web.FxController required a bean of type 'com.mrtn.fx.service.FxServiceForMyBatis' that could not be found.
 
 The injection point has the following annotations:
 	- @org.springframework.beans.factory.annotation.Autowired(required=true)
@@ -150,7 +150,7 @@ The injection point has the following annotations:
 
 Action:
 
-Consider defining a bean of type 'com.mrtn.fx.service.FxService' in your configuration.
+Consider defining a bean of type 'com.mrtn.fx.service.FxServiceForMyBatis' in your configuration.
 
 2020-12-22 14:15:10.892[restartedMain][INFO ][com.mrtn.fx.FxApplication] Starting FxApplication using Java 11.0.9.1 on macbook.local with PID 1172 (/Users/hmurotani/Documents/workspace/springboot-fx/out/production/classes started by hmurotani in /Users/hmurotani/Documents/workspace/springboot-fx)
 2020-12-22 14:15:10.892[restartedMain][INFO ][com.mrtn.fx.FxApplication] No active profile set, falling back to default profiles: default
@@ -4112,7 +4112,7 @@ org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique co
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)
 	at com.sun.proxy.$Proxy354.save(Unknown Source)
-	at com.mrtn.fx.service.FxService.save(FxService.java:81)
+	at com.mrtn.fx.service.FxServiceForMyBatis.save(FxService.java:81)
 	at com.mrtn.fx.web.FxController.save(FxController.java:106)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -4241,7 +4241,7 @@ org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique co
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)
 	at com.sun.proxy.$Proxy354.save(Unknown Source)
-	at com.mrtn.fx.service.FxService.save(FxService.java:81)
+	at com.mrtn.fx.service.FxServiceForMyBatis.save(FxService.java:81)
 	at com.mrtn.fx.web.FxController.save(FxController.java:106)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -4370,7 +4370,7 @@ org.postgresql.util.PSQLException: ERROR: duplicate key value violates unique co
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)
 	at com.sun.proxy.$Proxy354.save(Unknown Source)
-	at com.mrtn.fx.service.FxService.save(FxService.java:81)
+	at com.mrtn.fx.service.FxServiceForMyBatis.save(FxService.java:81)
 	at com.mrtn.fx.web.FxController.save(FxController.java:106)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -4460,7 +4460,7 @@ Caused by: org.modelmapper.MappingException: ModelMapper mapping errors:
 	at org.modelmapper.internal.MappingEngineImpl.map(MappingEngineImpl.java:72)
 	at org.modelmapper.ModelMapper.mapInternal(ModelMapper.java:573)
 	at org.modelmapper.ModelMapper.map(ModelMapper.java:406)
-	at com.mrtn.fx.service.FxService.save(FxService.java:80)
+	at com.mrtn.fx.service.FxServiceForMyBatis.save(FxService.java:80)
 	at com.mrtn.fx.web.FxController.save(FxController.java:106)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -4532,7 +4532,7 @@ Caused by: org.modelmapper.MappingException: ModelMapper mapping errors:
 	at org.modelmapper.internal.MappingEngineImpl.map(MappingEngineImpl.java:72)
 	at org.modelmapper.ModelMapper.mapInternal(ModelMapper.java:573)
 	at org.modelmapper.ModelMapper.map(ModelMapper.java:406)
-	at com.mrtn.fx.service.FxService.save(FxService.java:80)
+	at com.mrtn.fx.service.FxServiceForMyBatis.save(FxService.java:80)
 	at com.mrtn.fx.web.FxController.save(FxController.java:106)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -4607,7 +4607,7 @@ Caused by: org.modelmapper.MappingException: ModelMapper mapping errors:
 	at org.modelmapper.internal.MappingEngineImpl.map(MappingEngineImpl.java:72)
 	at org.modelmapper.ModelMapper.mapInternal(ModelMapper.java:573)
 	at org.modelmapper.ModelMapper.map(ModelMapper.java:406)
-	at com.mrtn.fx.service.FxService.save(FxService.java:80)
+	at com.mrtn.fx.service.FxServiceForMyBatis.save(FxService.java:80)
 	at com.mrtn.fx.web.FxController.save(FxController.java:106)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -4679,7 +4679,7 @@ Caused by: org.modelmapper.MappingException: ModelMapper mapping errors:
 	at org.modelmapper.internal.MappingEngineImpl.map(MappingEngineImpl.java:72)
 	at org.modelmapper.ModelMapper.mapInternal(ModelMapper.java:573)
 	at org.modelmapper.ModelMapper.map(ModelMapper.java:406)
-	at com.mrtn.fx.service.FxService.save(FxService.java:80)
+	at com.mrtn.fx.service.FxServiceForMyBatis.save(FxService.java:80)
 	at com.mrtn.fx.web.FxController.save(FxController.java:106)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -4737,7 +4737,7 @@ Caused by: org.modelmapper.MappingException: ModelMapper mapping errors:
 	at org.modelmapper.internal.MappingEngineImpl.map(MappingEngineImpl.java:81)
 	at org.modelmapper.ModelMapper.mapInternal(ModelMapper.java:573)
 	at org.modelmapper.ModelMapper.map(ModelMapper.java:406)
-	at com.mrtn.fx.service.FxService.save(FxService.java:80)
+	at com.mrtn.fx.service.FxServiceForMyBatis.save(FxService.java:80)
 	at com.mrtn.fx.web.FxController.save(FxController.java:106)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)

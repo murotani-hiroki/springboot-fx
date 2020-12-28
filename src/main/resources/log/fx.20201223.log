@@ -1006,7 +1006,7 @@ Caused by: org.modelmapper.MappingException: ModelMapper mapping errors:
 	at org.modelmapper.internal.MappingEngineImpl.map(MappingEngineImpl.java:72)
 	at org.modelmapper.ModelMapper.mapInternal(ModelMapper.java:573)
 	at org.modelmapper.ModelMapper.map(ModelMapper.java:406)
-	at com.mrtn.fx.service.FxService.save(FxService.java:80)
+	at com.mrtn.fx.service.FxServiceForMyBatis.save(FxService.java:80)
 	at com.mrtn.fx.web.FxController.save(FxController.java:127)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -1078,7 +1078,7 @@ Caused by: org.modelmapper.MappingException: ModelMapper mapping errors:
 	at org.modelmapper.internal.MappingEngineImpl.map(MappingEngineImpl.java:72)
 	at org.modelmapper.ModelMapper.mapInternal(ModelMapper.java:573)
 	at org.modelmapper.ModelMapper.map(ModelMapper.java:406)
-	at com.mrtn.fx.service.FxService.save(FxService.java:80)
+	at com.mrtn.fx.service.FxServiceForMyBatis.save(FxService.java:80)
 	at com.mrtn.fx.web.FxController.save(FxController.java:127)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -1153,7 +1153,7 @@ Caused by: org.modelmapper.MappingException: ModelMapper mapping errors:
 	at org.modelmapper.internal.MappingEngineImpl.map(MappingEngineImpl.java:72)
 	at org.modelmapper.ModelMapper.mapInternal(ModelMapper.java:573)
 	at org.modelmapper.ModelMapper.map(ModelMapper.java:406)
-	at com.mrtn.fx.service.FxService.save(FxService.java:80)
+	at com.mrtn.fx.service.FxServiceForMyBatis.save(FxService.java:80)
 	at com.mrtn.fx.web.FxController.save(FxController.java:127)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -1225,7 +1225,7 @@ Caused by: org.modelmapper.MappingException: ModelMapper mapping errors:
 	at org.modelmapper.internal.MappingEngineImpl.map(MappingEngineImpl.java:72)
 	at org.modelmapper.ModelMapper.mapInternal(ModelMapper.java:573)
 	at org.modelmapper.ModelMapper.map(ModelMapper.java:406)
-	at com.mrtn.fx.service.FxService.save(FxService.java:80)
+	at com.mrtn.fx.service.FxServiceForMyBatis.save(FxService.java:80)
 	at com.mrtn.fx.web.FxController.save(FxController.java:127)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -1283,7 +1283,7 @@ Caused by: org.modelmapper.MappingException: ModelMapper mapping errors:
 	at org.modelmapper.internal.MappingEngineImpl.map(MappingEngineImpl.java:81)
 	at org.modelmapper.ModelMapper.mapInternal(ModelMapper.java:573)
 	at org.modelmapper.ModelMapper.map(ModelMapper.java:406)
-	at com.mrtn.fx.service.FxService.save(FxService.java:80)
+	at com.mrtn.fx.service.FxServiceForMyBatis.save(FxService.java:80)
 	at com.mrtn.fx.web.FxController.save(FxController.java:127)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -2019,7 +2019,7 @@ org.springframework.context.NoSuchMessageException: No message found under code 
 2020-12-23 14:58:24.428[http-nio-8080-exec-10][ERROR][org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet]] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.util.NoSuchElementException: No value present] with root cause
 java.util.NoSuchElementException: No value present
 	at java.base/java.util.Optional.get(Optional.java:148)
-	at com.mrtn.fx.service.FxService.find(FxService.java:56)
+	at com.mrtn.fx.service.FxServiceForMyBatis.find(FxService.java:56)
 	at com.mrtn.fx.web.FxController.editModal(FxController.java:108)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -2076,7 +2076,7 @@ java.util.NoSuchElementException: No value present
 2020-12-23 14:58:25.909[http-nio-8080-exec-1][ERROR][org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet]] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.util.NoSuchElementException: No value present] with root cause
 java.util.NoSuchElementException: No value present
 	at java.base/java.util.Optional.get(Optional.java:148)
-	at com.mrtn.fx.service.FxService.find(FxService.java:56)
+	at com.mrtn.fx.service.FxServiceForMyBatis.find(FxService.java:56)
 	at com.mrtn.fx.web.FxController.editModal(FxController.java:108)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -2139,7 +2139,7 @@ java.util.NoSuchElementException: No value present
 2020-12-23 14:58:38.008[http-nio-8080-exec-5][ERROR][org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet]] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is java.util.NoSuchElementException: No value present] with root cause
 java.util.NoSuchElementException: No value present
 	at java.base/java.util.Optional.get(Optional.java:148)
-	at com.mrtn.fx.service.FxService.find(FxService.java:56)
+	at com.mrtn.fx.service.FxServiceForMyBatis.find(FxService.java:56)
 	at com.mrtn.fx.web.FxController.editModal(FxController.java:108)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -2225,7 +2225,7 @@ org.springframework.dao.EmptyResultDataAccessException: No class com.mrtn.fx.jpa
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)
 	at com.sun.proxy.$Proxy168.deleteById(Unknown Source)
-	at com.mrtn.fx.service.FxService.delete(FxService.java:91)
+	at com.mrtn.fx.service.FxServiceForMyBatis.delete(FxService.java:91)
 	at com.mrtn.fx.web.FxController.delete(FxController.java:72)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -2548,7 +2548,7 @@ Caused by: org.modelmapper.MappingException: ModelMapper mapping errors:
 	at org.modelmapper.internal.MappingEngineImpl.map(MappingEngineImpl.java:72)
 	at org.modelmapper.ModelMapper.mapInternal(ModelMapper.java:573)
 	at org.modelmapper.ModelMapper.map(ModelMapper.java:406)
-	at com.mrtn.fx.service.FxService.save(FxService.java:80)
+	at com.mrtn.fx.service.FxServiceForMyBatis.save(FxService.java:80)
 	at com.mrtn.fx.web.FxController.save(FxController.java:133)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -2620,7 +2620,7 @@ Caused by: org.modelmapper.MappingException: ModelMapper mapping errors:
 	at org.modelmapper.internal.MappingEngineImpl.map(MappingEngineImpl.java:72)
 	at org.modelmapper.ModelMapper.mapInternal(ModelMapper.java:573)
 	at org.modelmapper.ModelMapper.map(ModelMapper.java:406)
-	at com.mrtn.fx.service.FxService.save(FxService.java:80)
+	at com.mrtn.fx.service.FxServiceForMyBatis.save(FxService.java:80)
 	at com.mrtn.fx.web.FxController.save(FxController.java:133)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -2695,7 +2695,7 @@ Caused by: org.modelmapper.MappingException: ModelMapper mapping errors:
 	at org.modelmapper.internal.MappingEngineImpl.map(MappingEngineImpl.java:72)
 	at org.modelmapper.ModelMapper.mapInternal(ModelMapper.java:573)
 	at org.modelmapper.ModelMapper.map(ModelMapper.java:406)
-	at com.mrtn.fx.service.FxService.save(FxService.java:80)
+	at com.mrtn.fx.service.FxServiceForMyBatis.save(FxService.java:80)
 	at com.mrtn.fx.web.FxController.save(FxController.java:133)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -2767,7 +2767,7 @@ Caused by: org.modelmapper.MappingException: ModelMapper mapping errors:
 	at org.modelmapper.internal.MappingEngineImpl.map(MappingEngineImpl.java:72)
 	at org.modelmapper.ModelMapper.mapInternal(ModelMapper.java:573)
 	at org.modelmapper.ModelMapper.map(ModelMapper.java:406)
-	at com.mrtn.fx.service.FxService.save(FxService.java:80)
+	at com.mrtn.fx.service.FxServiceForMyBatis.save(FxService.java:80)
 	at com.mrtn.fx.web.FxController.save(FxController.java:133)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -2825,7 +2825,7 @@ Caused by: org.modelmapper.MappingException: ModelMapper mapping errors:
 	at org.modelmapper.internal.MappingEngineImpl.map(MappingEngineImpl.java:81)
 	at org.modelmapper.ModelMapper.mapInternal(ModelMapper.java:573)
 	at org.modelmapper.ModelMapper.map(ModelMapper.java:406)
-	at com.mrtn.fx.service.FxService.save(FxService.java:80)
+	at com.mrtn.fx.service.FxServiceForMyBatis.save(FxService.java:80)
 	at com.mrtn.fx.web.FxController.save(FxController.java:133)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -2899,7 +2899,7 @@ Caused by: org.modelmapper.MappingException: ModelMapper mapping errors:
 	at org.modelmapper.internal.MappingEngineImpl.map(MappingEngineImpl.java:72)
 	at org.modelmapper.ModelMapper.mapInternal(ModelMapper.java:573)
 	at org.modelmapper.ModelMapper.map(ModelMapper.java:406)
-	at com.mrtn.fx.service.FxService.save(FxService.java:80)
+	at com.mrtn.fx.service.FxServiceForMyBatis.save(FxService.java:80)
 	at com.mrtn.fx.web.FxController.save(FxController.java:133)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -2971,7 +2971,7 @@ Caused by: org.modelmapper.MappingException: ModelMapper mapping errors:
 	at org.modelmapper.internal.MappingEngineImpl.map(MappingEngineImpl.java:72)
 	at org.modelmapper.ModelMapper.mapInternal(ModelMapper.java:573)
 	at org.modelmapper.ModelMapper.map(ModelMapper.java:406)
-	at com.mrtn.fx.service.FxService.save(FxService.java:80)
+	at com.mrtn.fx.service.FxServiceForMyBatis.save(FxService.java:80)
 	at com.mrtn.fx.web.FxController.save(FxController.java:133)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -3046,7 +3046,7 @@ Caused by: org.modelmapper.MappingException: ModelMapper mapping errors:
 	at org.modelmapper.internal.MappingEngineImpl.map(MappingEngineImpl.java:72)
 	at org.modelmapper.ModelMapper.mapInternal(ModelMapper.java:573)
 	at org.modelmapper.ModelMapper.map(ModelMapper.java:406)
-	at com.mrtn.fx.service.FxService.save(FxService.java:80)
+	at com.mrtn.fx.service.FxServiceForMyBatis.save(FxService.java:80)
 	at com.mrtn.fx.web.FxController.save(FxController.java:133)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -3118,7 +3118,7 @@ Caused by: org.modelmapper.MappingException: ModelMapper mapping errors:
 	at org.modelmapper.internal.MappingEngineImpl.map(MappingEngineImpl.java:72)
 	at org.modelmapper.ModelMapper.mapInternal(ModelMapper.java:573)
 	at org.modelmapper.ModelMapper.map(ModelMapper.java:406)
-	at com.mrtn.fx.service.FxService.save(FxService.java:80)
+	at com.mrtn.fx.service.FxServiceForMyBatis.save(FxService.java:80)
 	at com.mrtn.fx.web.FxController.save(FxController.java:133)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -3176,7 +3176,7 @@ Caused by: org.modelmapper.MappingException: ModelMapper mapping errors:
 	at org.modelmapper.internal.MappingEngineImpl.map(MappingEngineImpl.java:81)
 	at org.modelmapper.ModelMapper.mapInternal(ModelMapper.java:573)
 	at org.modelmapper.ModelMapper.map(ModelMapper.java:406)
-	at com.mrtn.fx.service.FxService.save(FxService.java:80)
+	at com.mrtn.fx.service.FxServiceForMyBatis.save(FxService.java:80)
 	at com.mrtn.fx.web.FxController.save(FxController.java:133)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -3313,7 +3313,7 @@ Caused by: org.modelmapper.MappingException: ModelMapper mapping errors:
 	at org.modelmapper.internal.MappingEngineImpl.map(MappingEngineImpl.java:72)
 	at org.modelmapper.ModelMapper.mapInternal(ModelMapper.java:573)
 	at org.modelmapper.ModelMapper.map(ModelMapper.java:406)
-	at com.mrtn.fx.service.FxService.save(FxService.java:80)
+	at com.mrtn.fx.service.FxServiceForMyBatis.save(FxService.java:80)
 	at com.mrtn.fx.web.FxController.save(FxController.java:133)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -3385,7 +3385,7 @@ Caused by: org.modelmapper.MappingException: ModelMapper mapping errors:
 	at org.modelmapper.internal.MappingEngineImpl.map(MappingEngineImpl.java:72)
 	at org.modelmapper.ModelMapper.mapInternal(ModelMapper.java:573)
 	at org.modelmapper.ModelMapper.map(ModelMapper.java:406)
-	at com.mrtn.fx.service.FxService.save(FxService.java:80)
+	at com.mrtn.fx.service.FxServiceForMyBatis.save(FxService.java:80)
 	at com.mrtn.fx.web.FxController.save(FxController.java:133)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -3460,7 +3460,7 @@ Caused by: org.modelmapper.MappingException: ModelMapper mapping errors:
 	at org.modelmapper.internal.MappingEngineImpl.map(MappingEngineImpl.java:72)
 	at org.modelmapper.ModelMapper.mapInternal(ModelMapper.java:573)
 	at org.modelmapper.ModelMapper.map(ModelMapper.java:406)
-	at com.mrtn.fx.service.FxService.save(FxService.java:80)
+	at com.mrtn.fx.service.FxServiceForMyBatis.save(FxService.java:80)
 	at com.mrtn.fx.web.FxController.save(FxController.java:133)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -3532,7 +3532,7 @@ Caused by: org.modelmapper.MappingException: ModelMapper mapping errors:
 	at org.modelmapper.internal.MappingEngineImpl.map(MappingEngineImpl.java:72)
 	at org.modelmapper.ModelMapper.mapInternal(ModelMapper.java:573)
 	at org.modelmapper.ModelMapper.map(ModelMapper.java:406)
-	at com.mrtn.fx.service.FxService.save(FxService.java:80)
+	at com.mrtn.fx.service.FxServiceForMyBatis.save(FxService.java:80)
 	at com.mrtn.fx.web.FxController.save(FxController.java:133)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -3590,7 +3590,7 @@ Caused by: org.modelmapper.MappingException: ModelMapper mapping errors:
 	at org.modelmapper.internal.MappingEngineImpl.map(MappingEngineImpl.java:81)
 	at org.modelmapper.ModelMapper.mapInternal(ModelMapper.java:573)
 	at org.modelmapper.ModelMapper.map(ModelMapper.java:406)
-	at com.mrtn.fx.service.FxService.save(FxService.java:80)
+	at com.mrtn.fx.service.FxServiceForMyBatis.save(FxService.java:80)
 	at com.mrtn.fx.web.FxController.save(FxController.java:133)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -3694,7 +3694,7 @@ Caused by: org.modelmapper.MappingException: ModelMapper mapping errors:
 	at org.modelmapper.internal.MappingEngineImpl.map(MappingEngineImpl.java:72)
 	at org.modelmapper.ModelMapper.mapInternal(ModelMapper.java:573)
 	at org.modelmapper.ModelMapper.map(ModelMapper.java:406)
-	at com.mrtn.fx.service.FxService.save(FxService.java:80)
+	at com.mrtn.fx.service.FxServiceForMyBatis.save(FxService.java:80)
 	at com.mrtn.fx.web.FxController.save(FxController.java:133)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -3766,7 +3766,7 @@ Caused by: org.modelmapper.MappingException: ModelMapper mapping errors:
 	at org.modelmapper.internal.MappingEngineImpl.map(MappingEngineImpl.java:72)
 	at org.modelmapper.ModelMapper.mapInternal(ModelMapper.java:573)
 	at org.modelmapper.ModelMapper.map(ModelMapper.java:406)
-	at com.mrtn.fx.service.FxService.save(FxService.java:80)
+	at com.mrtn.fx.service.FxServiceForMyBatis.save(FxService.java:80)
 	at com.mrtn.fx.web.FxController.save(FxController.java:133)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -3841,7 +3841,7 @@ Caused by: org.modelmapper.MappingException: ModelMapper mapping errors:
 	at org.modelmapper.internal.MappingEngineImpl.map(MappingEngineImpl.java:72)
 	at org.modelmapper.ModelMapper.mapInternal(ModelMapper.java:573)
 	at org.modelmapper.ModelMapper.map(ModelMapper.java:406)
-	at com.mrtn.fx.service.FxService.save(FxService.java:80)
+	at com.mrtn.fx.service.FxServiceForMyBatis.save(FxService.java:80)
 	at com.mrtn.fx.web.FxController.save(FxController.java:133)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -3913,7 +3913,7 @@ Caused by: org.modelmapper.MappingException: ModelMapper mapping errors:
 	at org.modelmapper.internal.MappingEngineImpl.map(MappingEngineImpl.java:72)
 	at org.modelmapper.ModelMapper.mapInternal(ModelMapper.java:573)
 	at org.modelmapper.ModelMapper.map(ModelMapper.java:406)
-	at com.mrtn.fx.service.FxService.save(FxService.java:80)
+	at com.mrtn.fx.service.FxServiceForMyBatis.save(FxService.java:80)
 	at com.mrtn.fx.web.FxController.save(FxController.java:133)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -3971,7 +3971,7 @@ Caused by: org.modelmapper.MappingException: ModelMapper mapping errors:
 	at org.modelmapper.internal.MappingEngineImpl.map(MappingEngineImpl.java:81)
 	at org.modelmapper.ModelMapper.mapInternal(ModelMapper.java:573)
 	at org.modelmapper.ModelMapper.map(ModelMapper.java:406)
-	at com.mrtn.fx.service.FxService.save(FxService.java:80)
+	at com.mrtn.fx.service.FxServiceForMyBatis.save(FxService.java:80)
 	at com.mrtn.fx.web.FxController.save(FxController.java:133)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -4179,7 +4179,7 @@ org.modelmapper.MappingException: ModelMapper mapping errors:
 	at org.modelmapper.internal.MappingEngineImpl.map(MappingEngineImpl.java:72)
 	at org.modelmapper.ModelMapper.mapInternal(ModelMapper.java:573)
 	at org.modelmapper.ModelMapper.map(ModelMapper.java:406)
-	at com.mrtn.fx.service.FxService.save(FxService.java:80)
+	at com.mrtn.fx.service.FxServiceForMyBatis.save(FxService.java:80)
 	at com.mrtn.fx.web.FxController.save(FxController.java:134)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -4512,7 +4512,7 @@ Field error in object 'saveForm' on field 'settlementDate': rejected value []; c
 2020-12-23 17:40:58.562[restartedMain][INFO ][org.hibernate.dialect.Dialect] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
 2020-12-23 17:40:58.674[restartedMain][INFO ][org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
 2020-12-23 17:40:58.674[restartedMain][INFO ][org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-12-23 17:40:58.693[restartedMain][WARN ][org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fxService': Lookup method resolution failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [com.mrtn.fx.service.FxService] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@2fb6a93a]
+2020-12-23 17:40:58.693[restartedMain][WARN ][org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fxService': Lookup method resolution failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [com.mrtn.fx.service.FxServiceForMyBatis] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@2fb6a93a]
 2020-12-23 17:40:58.694[restartedMain][INFO ][org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] Closing JPA EntityManagerFactory for persistence unit 'default'
 2020-12-23 17:40:58.695[restartedMain][INFO ][com.zaxxer.hikari.HikariDataSource] HikariPool-17 - Shutdown initiated...
 2020-12-23 17:40:58.705[restartedMain][INFO ][com.zaxxer.hikari.HikariDataSource] HikariPool-17 - Shutdown completed.
@@ -4521,7 +4521,7 @@ Field error in object 'saveForm' on field 'settlementDate': rejected value []; c
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
 2020-12-23 17:40:58.777[restartedMain][ERROR][org.springframework.boot.SpringApplication] Application run failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fxService': Lookup method resolution failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [com.mrtn.fx.service.FxService] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@2fb6a93a]
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fxService': Lookup method resolution failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [com.mrtn.fx.service.FxServiceForMyBatis] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@2fb6a93a]
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:289)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1286)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1203)
@@ -4547,7 +4547,7 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
 	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
-Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.mrtn.fx.service.FxService] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@2fb6a93a]
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.mrtn.fx.service.FxServiceForMyBatis] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@2fb6a93a]
 	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:481)
 	at org.springframework.util.ReflectionUtils.doWithLocalMethods(ReflectionUtils.java:321)
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:267)
@@ -4652,7 +4652,7 @@ Caused by: java.lang.ClassNotFoundException: com.mrtn.fx.web.SaveForm
 2020-12-23 17:43:01.333[restartedMain][INFO ][org.hibernate.dialect.Dialect] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
 2020-12-23 17:43:01.484[restartedMain][INFO ][org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
 2020-12-23 17:43:01.485[restartedMain][INFO ][org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-12-23 17:43:01.505[restartedMain][WARN ][org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fxService': Lookup method resolution failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [com.mrtn.fx.service.FxService] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@b9d8897]
+2020-12-23 17:43:01.505[restartedMain][WARN ][org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fxService': Lookup method resolution failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [com.mrtn.fx.service.FxServiceForMyBatis] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@b9d8897]
 2020-12-23 17:43:01.506[restartedMain][INFO ][org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] Closing JPA EntityManagerFactory for persistence unit 'default'
 2020-12-23 17:43:01.506[restartedMain][INFO ][com.zaxxer.hikari.HikariDataSource] HikariPool-20 - Shutdown initiated...
 2020-12-23 17:43:01.555[restartedMain][INFO ][com.zaxxer.hikari.HikariDataSource] HikariPool-20 - Shutdown completed.
@@ -4661,7 +4661,7 @@ Caused by: java.lang.ClassNotFoundException: com.mrtn.fx.web.SaveForm
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
 2020-12-23 17:43:01.575[restartedMain][ERROR][org.springframework.boot.SpringApplication] Application run failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fxService': Lookup method resolution failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [com.mrtn.fx.service.FxService] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@b9d8897]
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fxService': Lookup method resolution failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [com.mrtn.fx.service.FxServiceForMyBatis] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@b9d8897]
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:289)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1286)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1203)
@@ -4687,7 +4687,7 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
 	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
-Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.mrtn.fx.service.FxService] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@b9d8897]
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.mrtn.fx.service.FxServiceForMyBatis] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@b9d8897]
 	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:481)
 	at org.springframework.util.ReflectionUtils.doWithLocalMethods(ReflectionUtils.java:321)
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:267)
@@ -6139,7 +6139,7 @@ Unconditional classes:
 2020-12-23 20:58:04.333[restartedMain][INFO ][org.hibernate.dialect.Dialect] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
 2020-12-23 20:58:04.432[restartedMain][INFO ][org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
 2020-12-23 20:58:04.433[restartedMain][INFO ][org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-12-23 20:58:04.443[restartedMain][WARN ][org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fxService': Lookup method resolution failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [com.mrtn.fx.service.FxService] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@4b9471be]
+2020-12-23 20:58:04.443[restartedMain][WARN ][org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fxService': Lookup method resolution failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [com.mrtn.fx.service.FxServiceForMyBatis] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@4b9471be]
 2020-12-23 20:58:04.443[restartedMain][INFO ][org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] Closing JPA EntityManagerFactory for persistence unit 'default'
 2020-12-23 20:58:04.443[restartedMain][INFO ][com.zaxxer.hikari.HikariDataSource] HikariPool-60 - Shutdown initiated...
 2020-12-23 20:58:04.460[restartedMain][INFO ][com.zaxxer.hikari.HikariDataSource] HikariPool-60 - Shutdown completed.
@@ -6148,7 +6148,7 @@ Unconditional classes:
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
 2020-12-23 20:58:04.473[restartedMain][ERROR][org.springframework.boot.SpringApplication] Application run failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fxService': Lookup method resolution failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [com.mrtn.fx.service.FxService] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@4b9471be]
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fxService': Lookup method resolution failed; nested exception is java.lang.IllegalStateException: Failed to introspect Class [com.mrtn.fx.service.FxServiceForMyBatis] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@4b9471be]
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:289)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineConstructorsFromBeanPostProcessors(AbstractAutowireCapableBeanFactory.java:1286)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1203)
@@ -6174,7 +6174,7 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
 	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
-Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.mrtn.fx.service.FxService] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@4b9471be]
+Caused by: java.lang.IllegalStateException: Failed to introspect Class [com.mrtn.fx.service.FxServiceForMyBatis] from ClassLoader [org.springframework.boot.devtools.restart.classloader.RestartClassLoader@4b9471be]
 	at org.springframework.util.ReflectionUtils.getDeclaredMethods(ReflectionUtils.java:481)
 	at org.springframework.util.ReflectionUtils.doWithLocalMethods(ReflectionUtils.java:321)
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.determineCandidateConstructors(AutowiredAnnotationBeanPostProcessor.java:267)

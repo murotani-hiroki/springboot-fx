@@ -1,11 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.mrtn.fx.mybatis.repository.TradeRepository">
+<mapper namespace="com.mrtn.fx.mybatis.repository.TradeMapper">
     <select id="findByTradingDate" resultType="com.mrtn.fx.mybatis.entity.Trade">
         SELECT
-            *
+            t.id,
+            trading_date,
+            settlement_date,
+            currency_pair_id,
+            c.currency_pair,
+            trade_type,
+            quantity,
+            entry_price,
+            exit_price,
+            stop_loss,
+            profit,
+            comment,
+            image_id
         FROM
-            trade
+            trade t
+        INNER JOIN currency_pair c ON
+            t.currency_pair_id = c.id
         ORDER BY
             trading_date
     </select>

@@ -7,7 +7,7 @@ import org.apache.ibatis.annotations.Select;
 import java.util.List;
 
 @Mapper
-public interface CurrencyPairRepository {
+public interface CurrencyPairMapper {
     //@Select("select * from currency_pair")
     public List<CurrencyPair> findAll();
 }

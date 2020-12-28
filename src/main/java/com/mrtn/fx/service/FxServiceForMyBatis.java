@@ -1,9 +1,9 @@
 package com.mrtn.fx.service;
 
-import com.mrtn.fx.jpa.repository.CurrencyPairRepository;
-import com.mrtn.fx.jpa.repository.TradeRepository;
 import com.mrtn.fx.model.CurrencyPair;
 import com.mrtn.fx.model.Trade;
+import com.mrtn.fx.mybatis.repository.CurrencyPairMapper;
+import com.mrtn.fx.mybatis.repository.TradeMapper;
 import com.mrtn.fx.web.SaveForm;
 import com.mrtn.fx.web.SearchForm;
 import org.apache.logging.log4j.util.Strings;
@@ -18,15 +18,15 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public class FxServiceForJpa implements FxService {
+public class FxServiceForMyBatis implements FxService {
 
     /** TradeRepository */
     @Autowired
-    private TradeRepository tradeRepository;
+    private TradeMapper tradeMapper;
 
     /** CurrencyPairRepository */
     @Autowired
-    private CurrencyPairRepository currencyPairRepository;
+    private CurrencyPairMapper currencyPairMapper;
 
     /** ModelMapper */
     private ModelMapper modelMapper = new ModelMapper();
@@ -42,25 +42,11 @@ public class FxServiceForJpa implements FxService {
     public List<Trade> search(SearchForm form) {
         //TODO formはDTOに移す。
         // From To の指定が無ければ、Min値 Max値 で検索する。
-        String fromDateStr = Strings.isNotBlank(form.getFromDate()) ? form.getFromDate() : "1970-01-01";
-        String toDateStr = Strings.isNotBlank(form.getToDate()) ? form.getToDate() : "9999-12-31";
-        Date fromDate = null;
-        Date toDate = null;
-        try {
-            // 日付フォーマットを yyyy-MM-dd に統一してDateを生成する。
-            fromDate = formatter.parse(unifyDateFormat(fromDateStr));
-            toDate = formatter.parse(unifyDateFormat(toDateStr));
-        } catch (ParseException e) {
-            throw new RuntimeException("日付の入力が不正です。", e);
-        }
+        String fromDate = Strings.isNotBlank(form.getFromDate()) ? form.getFromDate() : "1970-01-01";
+        String toDate = Strings.isNotBlank(form.getToDate()) ? form.getToDate() : "9999-12-31";
         List<Trade> results = new ArrayList<>();
-        //tradeRepository.findAll().forEach(entity -> {
-        tradeRepository.findByTradingDateBetweenOrderByTradingDate(fromDate, toDate).forEach(entity -> {
-            Trade trade = modelMapper.map(entity, Trade.class);
-            trade.setCurrencyPairId(entity.getCurrencyPair().getId());
-            trade.setCurrencyPair(entity.getCurrencyPair().getCurrencyPair());
-            //trade.setTradeType(TradeType.valueOf(entity.getTradeType()).toString());
-            results.add(trade);
+        tradeMapper.findByTradingDate(fromDate, toDate).forEach(entity -> {
+            results.add(modelMapper.map(entity, Trade.class));
         });
         return results;
     }
@@ -71,9 +57,12 @@ public class FxServiceForJpa implements FxService {
      * @return 検索結果
      */
     public Trade find(Integer id) {
+        /*
         com.mrtn.fx.jpa.entity.Trade trade = tradeRepository.findById(id).get();
         Trade result = modelMapper.map(trade, Trade.class);
         return result;
+         */
+        return null;
     }
 
     /**
@@ -82,7 +71,7 @@ public class FxServiceForJpa implements FxService {
      */
     public List<CurrencyPair> getCurrencyPairs() {
         List<CurrencyPair> results = new ArrayList<>();
-        currencyPairRepository.findAll().forEach(
+        currencyPairMapper.findAll().forEach(
                 entity -> results.add(modelMapper.map(entity, CurrencyPair.class)));
         return results;
     }
@@ -90,9 +79,11 @@ public class FxServiceForJpa implements FxService {
     /**
      * 登録／更新
      * @param form 更新内容
+     * @return 検索結果
      */
     public void save(SaveForm form) {
         //TODO formはDTOに移す。
+
         modelMapper.addConverter(new Converter<String, Date>() {
             @Override
             public Date convert(MappingContext<String, Date> context) {
@@ -105,9 +96,9 @@ public class FxServiceForJpa implements FxService {
                 }
             }
         });
-
         com.mrtn.fx.jpa.entity.Trade trade = modelMapper.map(form, com.mrtn.fx.jpa.entity.Trade.class);
-        tradeRepository.save(trade);
+
+        //tradeRepository.save(trade);
     }
 
     /**
@@ -124,10 +115,11 @@ public class FxServiceForJpa implements FxService {
     /**
      * 削除
      * @param deleteIds 削除対象ID
+     * @return 検索結果
      */
     public void delete(String[] deleteIds) {
         for (String id : deleteIds) {
-            tradeRepository.deleteById(Integer.valueOf(id));
+            //tradeRepository.deleteById(Integer.valueOf(id));
         }
     }
 }

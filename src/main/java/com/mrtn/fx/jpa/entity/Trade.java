@@ -2,20 +2,17 @@ package com.mrtn.fx.jpa.entity;
 
 import lombok.Data;
 
+import javax.persistence.*;
 import java.util.Date;
 
 @Data
-/* jpa版コメント化
 @Entity
 @Table(name = "trade")
-*/
 public class Trade {
 
     /** ID */
-    /* jpa版コメント化
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    */
     private Integer id;
 
     /** 取引日 */
@@ -28,10 +25,8 @@ public class Trade {
     //private Integer currencyPairId;
 
     /** 通貨ペア */
-    /* jpa版コメント化
     @ManyToOne
     @JoinColumn(name = "currency_pair_id")
-    */
     private CurrencyPair currencyPair;
 
     /** Ask/Bid */

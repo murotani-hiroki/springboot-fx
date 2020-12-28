@@ -8,7 +8,7 @@ import java.util.Date;
 import java.util.List;
 
 @Mapper
-public interface TradeRepository {
+public interface TradeMapper {
 
     public List<Trade> findByTradingDate(
             @Param("fromDate") String fromDate,

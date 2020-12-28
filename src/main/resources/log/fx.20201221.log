@@ -250,7 +250,7 @@ org.postgresql.util.PSQLException: ERROR: relation "trade" does not exist
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)
 	at com.sun.proxy.$Proxy95.findAll(Unknown Source)
-	at com.mrtn.fx.service.FxService.search(FxService.java:25)
+	at com.mrtn.fx.service.FxServiceForMyBatis.search(FxService.java:25)
 	at com.mrtn.fx.web.FxController.search(FxController.java:44)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -399,7 +399,7 @@ org.postgresql.util.PSQLException: ERROR: relation "trade" does not exist
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)
 	at com.sun.proxy.$Proxy79.findAll(Unknown Source)
-	at com.mrtn.fx.service.FxService.search(FxService.java:25)
+	at com.mrtn.fx.service.FxServiceForMyBatis.search(FxService.java:25)
 	at com.mrtn.fx.web.FxController.search(FxController.java:44)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -547,7 +547,7 @@ org.postgresql.util.PSQLException: ERROR: relation "trades" does not exist
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)
 	at com.sun.proxy.$Proxy79.findAll(Unknown Source)
-	at com.mrtn.fx.service.FxService.search(FxService.java:25)
+	at com.mrtn.fx.service.FxServiceForMyBatis.search(FxService.java:25)
 	at com.mrtn.fx.web.FxController.search(FxController.java:44)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -697,7 +697,7 @@ org.postgresql.util.PSQLException: ERROR: column trade0_.currency_pair does not 
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:215)
 	at com.sun.proxy.$Proxy79.findAll(Unknown Source)
-	at com.mrtn.fx.service.FxService.search(FxService.java:25)
+	at com.mrtn.fx.service.FxServiceForMyBatis.search(FxService.java:25)
 	at com.mrtn.fx.web.FxController.search(FxController.java:44)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -1558,7 +1558,7 @@ APPLICATION FAILED TO START
 
 Description:
 
-Field modelMapper in com.mrtn.fx.service.FxService required a bean of type 'org.modelmapper.ModelMapper' that could not be found.
+Field modelMapper in com.mrtn.fx.service.FxServiceForMyBatis required a bean of type 'org.modelmapper.ModelMapper' that could not be found.
 
 The injection point has the following annotations:
 	- @org.springframework.beans.factory.annotation.Autowired(required=true)
@@ -1761,7 +1761,7 @@ Caused by: java.lang.NoClassDefFoundError: Lcom/mrtn/fx/service/FxService;
 	at java.base/java.lang.Class.getDeclaredFields(Class.java:2248)
 	at org.springframework.util.ReflectionUtils.getDeclaredFields(ReflectionUtils.java:732)
 	... 27 common frames omitted
-Caused by: java.lang.ClassNotFoundException: com.mrtn.fx.service.FxService
+Caused by: java.lang.ClassNotFoundException: com.mrtn.fx.service.FxServiceForMyBatis
 	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581)
 	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
@@ -1977,7 +1977,7 @@ Caused by: java.lang.NoClassDefFoundError: Lcom/mrtn/fx/service/FxService;
 	at java.base/java.lang.Class.getDeclaredFields(Class.java:2248)
 	at org.springframework.util.ReflectionUtils.getDeclaredFields(ReflectionUtils.java:732)
 	... 27 common frames omitted
-Caused by: java.lang.ClassNotFoundException: com.mrtn.fx.service.FxService
+Caused by: java.lang.ClassNotFoundException: com.mrtn.fx.service.FxServiceForMyBatis
 	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:581)
 	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:178)
 	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:522)
