@@ -1,17 +1,17 @@
 package com.mrtn.fx.mybatis.repository;
 
 import com.mrtn.fx.mybatis.entity.Trade;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Param;
 
-import java.util.Date;
-import java.util.List;
-
-@Mapper
 public interface TradeMapper {
+    int deleteByPrimaryKey(Integer id);
 
-    public List<Trade> findByTradingDate(
-            @Param("fromDate") String fromDate,
-            @Param("toDate") String ToDate
-    );
+    int insert(Trade record);
+
+    int insertSelective(Trade record);
+
+    Trade selectByPrimaryKey(Integer id);
+
+    int updateByPrimaryKeySelective(Trade record);
+
+    int updateByPrimaryKey(Trade record);
 }

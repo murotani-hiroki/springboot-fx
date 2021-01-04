@@ -2,8 +2,8 @@ package com.mrtn.fx.service;
 
 import com.mrtn.fx.model.CurrencyPair;
 import com.mrtn.fx.model.Trade;
-import com.mrtn.fx.mybatis.repository.CurrencyPairMapper;
-import com.mrtn.fx.mybatis.repository.TradeMapper;
+import com.mrtn.fx.mybatis.repository.ext.CurrencyPairSearchMapper;
+import com.mrtn.fx.mybatis.repository.ext.TradeSearchMapper;
 import com.mrtn.fx.web.SaveForm;
 import com.mrtn.fx.web.SearchForm;
 import org.apache.logging.log4j.util.Strings;
@@ -22,11 +22,11 @@ public class FxServiceForMyBatis implements FxService {
 
     /** TradeRepository */
     @Autowired
-    private TradeMapper tradeMapper;
+    private TradeSearchMapper tradeSearchMapper;
 
     /** CurrencyPairRepository */
     @Autowired
-    private CurrencyPairMapper currencyPairMapper;
+    private CurrencyPairSearchMapper currencyPairSearchMapper;
 
     /** ModelMapper */
     private ModelMapper modelMapper = new ModelMapper();
@@ -45,7 +45,7 @@ public class FxServiceForMyBatis implements FxService {
         String fromDate = Strings.isNotBlank(form.getFromDate()) ? form.getFromDate() : "1970-01-01";
         String toDate = Strings.isNotBlank(form.getToDate()) ? form.getToDate() : "9999-12-31";
         List<Trade> results = new ArrayList<>();
-        tradeMapper.findByTradingDate(fromDate, toDate).forEach(entity -> {
+        tradeSearchMapper.findByTradingDate(fromDate, toDate).forEach(entity -> {
             results.add(modelMapper.map(entity, Trade.class));
         });
         return results;
@@ -71,7 +71,7 @@ public class FxServiceForMyBatis implements FxService {
      */
     public List<CurrencyPair> getCurrencyPairs() {
         List<CurrencyPair> results = new ArrayList<>();
-        currencyPairMapper.findAll().forEach(
+        currencyPairSearchMapper.findAll().forEach(
                 entity -> results.add(modelMapper.map(entity, CurrencyPair.class)));
         return results;
     }

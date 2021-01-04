@@ -1,15 +1,23 @@
 package com.mrtn.fx.mybatis.entity;
 
-import lombok.Data;
-
-@Data
 public class CurrencyPair {
-
-    /** ID */
     private Integer id;
 
-    /** 通貨ペア */
     private String currencyPair;
 
+    public Integer getId() {
+        return id;
+    }
 
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getCurrencyPair() {
+        return currencyPair;
+    }
+
+    public void setCurrencyPair(String currencyPair) {
+        this.currencyPair = currencyPair;
+    }
 }

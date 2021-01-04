@@ -1,27 +1,177 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.mrtn.fx.mybatis.repository.TradeMapper">
-    <select id="findByTradingDate" resultType="com.mrtn.fx.mybatis.entity.Trade">
-        SELECT
-            t.id,
-            trading_date,
-            settlement_date,
-            currency_pair_id,
-            c.currency_pair,
-            trade_type,
-            quantity,
-            entry_price,
-            exit_price,
-            stop_loss,
-            profit,
-            comment,
-            image_id
-        FROM
-            trade t
-        INNER JOIN currency_pair c ON
-            t.currency_pair_id = c.id
-        ORDER BY
-            trading_date
-    </select>
+  <resultMap id="BaseResultMap" type="com.mrtn.fx.mybatis.entity.Trade">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="trading_date" jdbcType="DATE" property="tradingDate" />
+    <result column="settlement_date" jdbcType="DATE" property="settlementDate" />
+    <result column="currency_pair_id" jdbcType="INTEGER" property="currencyPairId" />
+    <result column="trade_type" jdbcType="INTEGER" property="tradeType" />
+    <result column="quantity" jdbcType="INTEGER" property="quantity" />
+    <result column="entry_price" jdbcType="NUMERIC" property="entryPrice" />
+    <result column="exit_price" jdbcType="NUMERIC" property="exitPrice" />
+    <result column="stop_loss" jdbcType="INTEGER" property="stopLoss" />
+    <result column="profit" jdbcType="NUMERIC" property="profit" />
+    <result column="comment" jdbcType="VARCHAR" property="comment" />
+    <result column="image_id" jdbcType="INTEGER" property="imageId" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, trading_date, settlement_date, currency_pair_id, trade_type, quantity, entry_price, 
+    exit_price, stop_loss, profit, comment, image_id
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from public.trade
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from public.trade
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.mrtn.fx.mybatis.entity.Trade">
+    insert into public.trade (id, trading_date, settlement_date, 
+      currency_pair_id, trade_type, quantity, 
+      entry_price, exit_price, stop_loss, 
+      profit, comment, image_id
+      )
+    values (#{id,jdbcType=INTEGER}, #{tradingDate,jdbcType=DATE}, #{settlementDate,jdbcType=DATE}, 
+      #{currencyPairId,jdbcType=INTEGER}, #{tradeType,jdbcType=INTEGER}, #{quantity,jdbcType=INTEGER}, 
+      #{entryPrice,jdbcType=NUMERIC}, #{exitPrice,jdbcType=NUMERIC}, #{stopLoss,jdbcType=INTEGER}, 
+      #{profit,jdbcType=NUMERIC}, #{comment,jdbcType=VARCHAR}, #{imageId,jdbcType=INTEGER}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.mrtn.fx.mybatis.entity.Trade">
+    insert into public.trade
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="tradingDate != null">
+        trading_date,
+      </if>
+      <if test="settlementDate != null">
+        settlement_date,
+      </if>
+      <if test="currencyPairId != null">
+        currency_pair_id,
+      </if>
+      <if test="tradeType != null">
+        trade_type,
+      </if>
+      <if test="quantity != null">
+        quantity,
+      </if>
+      <if test="entryPrice != null">
+        entry_price,
+      </if>
+      <if test="exitPrice != null">
+        exit_price,
+      </if>
+      <if test="stopLoss != null">
+        stop_loss,
+      </if>
+      <if test="profit != null">
+        profit,
+      </if>
+      <if test="comment != null">
+        comment,
+      </if>
+      <if test="imageId != null">
+        image_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="tradingDate != null">
+        #{tradingDate,jdbcType=DATE},
+      </if>
+      <if test="settlementDate != null">
+        #{settlementDate,jdbcType=DATE},
+      </if>
+      <if test="currencyPairId != null">
+        #{currencyPairId,jdbcType=INTEGER},
+      </if>
+      <if test="tradeType != null">
+        #{tradeType,jdbcType=INTEGER},
+      </if>
+      <if test="quantity != null">
+        #{quantity,jdbcType=INTEGER},
+      </if>
+      <if test="entryPrice != null">
+        #{entryPrice,jdbcType=NUMERIC},
+      </if>
+      <if test="exitPrice != null">
+        #{exitPrice,jdbcType=NUMERIC},
+      </if>
+      <if test="stopLoss != null">
+        #{stopLoss,jdbcType=INTEGER},
+      </if>
+      <if test="profit != null">
+        #{profit,jdbcType=NUMERIC},
+      </if>
+      <if test="comment != null">
+        #{comment,jdbcType=VARCHAR},
+      </if>
+      <if test="imageId != null">
+        #{imageId,jdbcType=INTEGER},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.mrtn.fx.mybatis.entity.Trade">
+    update public.trade
+    <set>
+      <if test="tradingDate != null">
+        trading_date = #{tradingDate,jdbcType=DATE},
+      </if>
+      <if test="settlementDate != null">
+        settlement_date = #{settlementDate,jdbcType=DATE},
+      </if>
+      <if test="currencyPairId != null">
+        currency_pair_id = #{currencyPairId,jdbcType=INTEGER},
+      </if>
+      <if test="tradeType != null">
+        trade_type = #{tradeType,jdbcType=INTEGER},
+      </if>
+      <if test="quantity != null">
+        quantity = #{quantity,jdbcType=INTEGER},
+      </if>
+      <if test="entryPrice != null">
+        entry_price = #{entryPrice,jdbcType=NUMERIC},
+      </if>
+      <if test="exitPrice != null">
+        exit_price = #{exitPrice,jdbcType=NUMERIC},
+      </if>
+      <if test="stopLoss != null">
+        stop_loss = #{stopLoss,jdbcType=INTEGER},
+      </if>
+      <if test="profit != null">
+        profit = #{profit,jdbcType=NUMERIC},
+      </if>
+      <if test="comment != null">
+        comment = #{comment,jdbcType=VARCHAR},
+      </if>
+      <if test="imageId != null">
+        image_id = #{imageId,jdbcType=INTEGER},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.mrtn.fx.mybatis.entity.Trade">
+    update public.trade
+    set trading_date = #{tradingDate,jdbcType=DATE},
+      settlement_date = #{settlementDate,jdbcType=DATE},
+      currency_pair_id = #{currencyPairId,jdbcType=INTEGER},
+      trade_type = #{tradeType,jdbcType=INTEGER},
+      quantity = #{quantity,jdbcType=INTEGER},
+      entry_price = #{entryPrice,jdbcType=NUMERIC},
+      exit_price = #{exitPrice,jdbcType=NUMERIC},
+      stop_loss = #{stopLoss,jdbcType=INTEGER},
+      profit = #{profit,jdbcType=NUMERIC},
+      comment = #{comment,jdbcType=VARCHAR},
+      image_id = #{imageId,jdbcType=INTEGER}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
 </mapper>
-

@@ -1,13 +1,17 @@
 package com.mrtn.fx.mybatis.repository;
 
 import com.mrtn.fx.mybatis.entity.CurrencyPair;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Select;
 
-import java.util.List;
-
-@Mapper
 public interface CurrencyPairMapper {
-    //@Select("select * from currency_pair")
-    public List<CurrencyPair> findAll();
+    int deleteByPrimaryKey(Integer id);
+
+    int insert(CurrencyPair record);
+
+    int insertSelective(CurrencyPair record);
+
+    CurrencyPair selectByPrimaryKey(Integer id);
+
+    int updateByPrimaryKeySelective(CurrencyPair record);
+
+    int updateByPrimaryKey(CurrencyPair record);
 }

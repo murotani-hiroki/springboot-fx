@@ -642,7 +642,7 @@ Caused by: java.lang.ClassNotFoundException: com.mrtn.fx.web.SearchForm
 2020-12-25 17:02:19.833[restartedMain][INFO ][org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
 2020-12-25 17:02:19.834[restartedMain][INFO ][org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
 2020-12-25 17:02:20.654[restartedMain][INFO ][org.springframework.data.repository.config.RepositoryConfigurationDelegate] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2020-12-25 17:02:20.807[restartedMain][WARN ][org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'tradeRepository' defined in com.mrtn.fx.mybatis.repository.TradeMapper defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot register bean definition [Root bean: class [org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in com.mrtn.fx.mybatis.repository.TradeMapper defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration] for bean 'tradeRepository': There is already [Root bean: class [org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in com.mrtn.fx.jpa.repository.TradeRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration] bound.
+2020-12-25 17:02:20.807[restartedMain][WARN ][org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'tradeRepository' defined in com.mrtn.fx.mybatis.repository.ext.TradeSearchMapper defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot register bean definition [Root bean: class [org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in com.mrtn.fx.mybatis.repository.ext.TradeSearchMapper defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration] for bean 'tradeRepository': There is already [Root bean: class [org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in com.mrtn.fx.jpa.repository.TradeRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration] bound.
 2020-12-25 17:02:20.822[restartedMain][INFO ][org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener] 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
@@ -654,7 +654,7 @@ APPLICATION FAILED TO START
 
 Description:
 
-The bean 'tradeRepository', defined in com.mrtn.fx.mybatis.repository.TradeMapper defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration, could not be registered. A bean with that name has already been defined in com.mrtn.fx.jpa.repository.TradeRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration and overriding is disabled.
+The bean 'tradeRepository', defined in com.mrtn.fx.mybatis.repository.ext.TradeSearchMapper defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration, could not be registered. A bean with that name has already been defined in com.mrtn.fx.jpa.repository.TradeRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration and overriding is disabled.
 
 Action:
 
@@ -690,7 +690,7 @@ Consider renaming one of the beans or enabling overriding by setting spring.main
 2020-12-25 17:05:11.416[restartedMain][INFO ][org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
 2020-12-25 17:05:11.416[restartedMain][INFO ][org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
 2020-12-25 17:05:12.085[restartedMain][INFO ][org.springframework.data.repository.config.RepositoryConfigurationDelegate] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2020-12-25 17:05:12.154[restartedMain][WARN ][org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'tradeRepository' defined in com.mrtn.fx.jpa.repository.TradeRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot register bean definition [Root bean: class [org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in com.mrtn.fx.jpa.repository.TradeRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration] for bean 'tradeRepository': There is already [Root bean: class [org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in com.mrtn.fx.mybatis.repository.TradeMapper defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration] bound.
+2020-12-25 17:05:12.154[restartedMain][WARN ][org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.support.BeanDefinitionOverrideException: Invalid bean definition with name 'tradeRepository' defined in com.mrtn.fx.jpa.repository.TradeRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration: Cannot register bean definition [Root bean: class [org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in com.mrtn.fx.jpa.repository.TradeRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration] for bean 'tradeRepository': There is already [Root bean: class [org.springframework.data.jpa.repository.support.JpaRepositoryFactoryBean]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in com.mrtn.fx.mybatis.repository.ext.TradeSearchMapper defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration] bound.
 2020-12-25 17:05:12.164[restartedMain][INFO ][org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener] 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
@@ -702,7 +702,7 @@ APPLICATION FAILED TO START
 
 Description:
 
-The bean 'tradeRepository', defined in com.mrtn.fx.jpa.repository.TradeRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration, could not be registered. A bean with that name has already been defined in com.mrtn.fx.mybatis.repository.TradeMapper defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration and overriding is disabled.
+The bean 'tradeRepository', defined in com.mrtn.fx.jpa.repository.TradeRepository defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration, could not be registered. A bean with that name has already been defined in com.mrtn.fx.mybatis.repository.ext.TradeSearchMapper defined in @EnableJpaRepositories declared on JpaRepositoriesRegistrar.EnableJpaRepositoriesConfiguration and overriding is disabled.
 
 Action:
 
@@ -887,7 +887,7 @@ Consider defining a bean of type 'com.mrtn.fx.mybatis.repository.CurrencyPairRep
 2020-12-25 17:28:38.935[restartedMain][INFO ][org.springframework.data.repository.config.RepositoryConfigurationDelegate] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 2020-12-25 17:28:38.989[restartedMain][INFO ][org.springframework.data.repository.config.RepositoryConfigurationDelegate] Finished Spring Data repository scanning in 47 ms. Found 2 JPA repository interfaces.
 2020-12-25 17:28:39.104[restartedMain][WARN ][org.mybatis.spring.mapper.ClassPathMapperScanner] Skipping MapperFactoryBean with name 'currencyPairRepository' and 'com.mrtn.fx.mybatis.repository.CurrencyPairRepository' mapperInterface. Bean already defined with the same name!
-2020-12-25 17:28:39.104[restartedMain][WARN ][org.mybatis.spring.mapper.ClassPathMapperScanner] Skipping MapperFactoryBean with name 'tradeRepository' and 'com.mrtn.fx.mybatis.repository.TradeMapper' mapperInterface. Bean already defined with the same name!
+2020-12-25 17:28:39.104[restartedMain][WARN ][org.mybatis.spring.mapper.ClassPathMapperScanner] Skipping MapperFactoryBean with name 'tradeRepository' and 'com.mrtn.fx.mybatis.repository.ext.TradeSearchMapper' mapperInterface. Bean already defined with the same name!
 2020-12-25 17:28:39.105[restartedMain][WARN ][org.mybatis.spring.mapper.ClassPathMapperScanner] No MyBatis mapper was found in '[com.mrtn.fx.mybatis.repository]' package. Please check your configuration.
 2020-12-25 17:28:39.615[restartedMain][INFO ][org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port(s): 8080 (http)
 2020-12-25 17:28:39.626[restartedMain][INFO ][org.apache.coyote.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"]
@@ -937,7 +937,7 @@ Consider defining a bean of type 'com.mrtn.fx.mybatis.repository.CurrencyPairRep
 2020-12-25 17:28:53.798[restartedMain][INFO ][org.springframework.data.repository.config.RepositoryConfigurationDelegate] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 2020-12-25 17:28:53.858[restartedMain][INFO ][org.springframework.data.repository.config.RepositoryConfigurationDelegate] Finished Spring Data repository scanning in 51 ms. Found 2 JPA repository interfaces.
 2020-12-25 17:28:53.994[restartedMain][WARN ][org.mybatis.spring.mapper.ClassPathMapperScanner] Skipping MapperFactoryBean with name 'currencyPairRepository' and 'com.mrtn.fx.mybatis.repository.CurrencyPairRepository' mapperInterface. Bean already defined with the same name!
-2020-12-25 17:28:53.994[restartedMain][WARN ][org.mybatis.spring.mapper.ClassPathMapperScanner] Skipping MapperFactoryBean with name 'tradeRepository' and 'com.mrtn.fx.mybatis.repository.TradeMapper' mapperInterface. Bean already defined with the same name!
+2020-12-25 17:28:53.994[restartedMain][WARN ][org.mybatis.spring.mapper.ClassPathMapperScanner] Skipping MapperFactoryBean with name 'tradeRepository' and 'com.mrtn.fx.mybatis.repository.ext.TradeSearchMapper' mapperInterface. Bean already defined with the same name!
 2020-12-25 17:28:53.994[restartedMain][WARN ][org.mybatis.spring.mapper.ClassPathMapperScanner] No MyBatis mapper was found in '[com.mrtn.fx.mybatis.repository]' package. Please check your configuration.
 2020-12-25 17:28:54.600[restartedMain][INFO ][org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port(s): 8080 (http)
 2020-12-25 17:28:54.612[restartedMain][INFO ][org.apache.coyote.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"]
@@ -1734,8 +1734,8 @@ Consider defining a bean of type 'com.mrtn.fx.jpa.repository.TradeRepository' in
 2020-12-25 21:36:45.662[http-nio-8080-exec-1][INFO ][org.springframework.web.servlet.DispatcherServlet] Initializing Servlet 'dispatcherServlet'
 2020-12-25 21:36:45.664[http-nio-8080-exec-1][INFO ][org.springframework.web.servlet.DispatcherServlet] Completed initialization in 2 ms
 2020-12-25 21:36:46.126[http-nio-8080-exec-5][INFO ][com.mrtn.fx.web.FxController] --- search start ---
-2020-12-25 21:36:46.134[http-nio-8080-exec-5][ERROR][org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet]] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.mrtn.fx.mybatis.repository.TradeMapper.findByTradingDateBetweenOrderByTradingDate] with root cause
-org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.mrtn.fx.mybatis.repository.TradeMapper.findByTradingDateBetweenOrderByTradingDate
+2020-12-25 21:36:46.134[http-nio-8080-exec-5][ERROR][org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet]] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.mrtn.fx.mybatis.repository.ext.TradeSearchMapper.findByTradingDateBetweenOrderByTradingDate] with root cause
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.mrtn.fx.mybatis.repository.ext.TradeSearchMapper.findByTradingDateBetweenOrderByTradingDate
 	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
 	at org.apache.ibatis.binding.MapperMethod.<init>(MapperMethod.java:53)
 	at org.apache.ibatis.binding.MapperProxy.lambda$cachedInvoker$0(MapperProxy.java:115)
@@ -1829,8 +1829,8 @@ org.apache.ibatis.binding.BindingException: Invalid bound statement (not found):
 2020-12-25 21:47:37.598[http-nio-8080-exec-1][INFO ][org.springframework.web.servlet.DispatcherServlet] Initializing Servlet 'dispatcherServlet'
 2020-12-25 21:47:37.599[http-nio-8080-exec-1][INFO ][org.springframework.web.servlet.DispatcherServlet] Completed initialization in 1 ms
 2020-12-25 21:47:38.077[http-nio-8080-exec-5][INFO ][com.mrtn.fx.web.FxController] --- search start ---
-2020-12-25 21:47:38.084[http-nio-8080-exec-5][ERROR][org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet]] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.mrtn.fx.mybatis.repository.TradeMapper.findByTradingDateBetweenOrderByTradingDate] with root cause
-org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.mrtn.fx.mybatis.repository.TradeMapper.findByTradingDateBetweenOrderByTradingDate
+2020-12-25 21:47:38.084[http-nio-8080-exec-5][ERROR][org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet]] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.mrtn.fx.mybatis.repository.ext.TradeSearchMapper.findByTradingDateBetweenOrderByTradingDate] with root cause
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.mrtn.fx.mybatis.repository.ext.TradeSearchMapper.findByTradingDateBetweenOrderByTradingDate
 	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
 	at org.apache.ibatis.binding.MapperMethod.<init>(MapperMethod.java:53)
 	at org.apache.ibatis.binding.MapperProxy.lambda$cachedInvoker$0(MapperProxy.java:115)
@@ -2375,8 +2375,8 @@ Caused by: java.lang.ClassNotFoundException: com.mrtn.fx.service.FxService
 2020-12-25 22:33:57.751[http-nio-8080-exec-1][INFO ][org.springframework.web.servlet.DispatcherServlet] Initializing Servlet 'dispatcherServlet'
 2020-12-25 22:33:57.752[http-nio-8080-exec-1][INFO ][org.springframework.web.servlet.DispatcherServlet] Completed initialization in 1 ms
 2020-12-25 22:33:57.993[http-nio-8080-exec-5][INFO ][com.mrtn.fx.web.FxController] --- search start ---
-2020-12-25 22:33:57.997[http-nio-8080-exec-5][ERROR][org.apache.catalina.core.ContainerBase.[Tomcat-1].[localhost].[/].[dispatcherServlet]] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.mrtn.fx.mybatis.repository.TradeMapper.findByTradingDate] with root cause
-org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.mrtn.fx.mybatis.repository.TradeMapper.findByTradingDate
+2020-12-25 22:33:57.997[http-nio-8080-exec-5][ERROR][org.apache.catalina.core.ContainerBase.[Tomcat-1].[localhost].[/].[dispatcherServlet]] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.mrtn.fx.mybatis.repository.ext.TradeSearchMapper.findByTradingDate] with root cause
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.mrtn.fx.mybatis.repository.ext.TradeSearchMapper.findByTradingDate
 	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
 	at org.apache.ibatis.binding.MapperMethod.<init>(MapperMethod.java:53)
 	at org.apache.ibatis.binding.MapperProxy.lambda$cachedInvoker$0(MapperProxy.java:115)
@@ -2587,7 +2587,7 @@ Caused by: java.net.ConnectException: Connection refused (Connection refused)
 2020-12-28 14:06:36.407[http-nio-8080-exec-5][ERROR][org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet]] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
 ### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is org.postgresql.util.PSQLException: 127.0.0.1:15432 への接続が拒絶されました。ホスト名とポート番号が正しいことと、postmaster がTCP/IP接続を受け付けていることを確認してください。
 ### The error may exist in file [/Users/hmurotani/Documents/workspace/springboot-fx/out/production/resources/mapper/TradeMapper.xml]
-### The error may involve com.mrtn.fx.mybatis.repository.TradeMapper.findByTradingDate
+### The error may involve com.mrtn.fx.mybatis.repository.ext.TradeSearchMapper.findByTradingDate
 ### The error occurred while executing a query
 ### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is org.postgresql.util.PSQLException: 127.0.0.1:15432 への接続が拒絶されました。ホスト名とポート番号が正しいことと、postmaster がTCP/IP接続を受け付けていることを確認してください。] with root cause
 java.net.ConnectException: Connection refused (Connection refused)
@@ -2799,7 +2799,7 @@ Caused by: java.net.ConnectException: Connection refused (Connection refused)
 2020-12-28 14:06:38.316[http-nio-8080-exec-7][ERROR][org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet]] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.mybatis.spring.MyBatisSystemException: nested exception is org.apache.ibatis.exceptions.PersistenceException: 
 ### Error querying database.  Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is org.postgresql.util.PSQLException: 127.0.0.1:15432 への接続が拒絶されました。ホスト名とポート番号が正しいことと、postmaster がTCP/IP接続を受け付けていることを確認してください。
 ### The error may exist in file [/Users/hmurotani/Documents/workspace/springboot-fx/out/production/resources/mapper/TradeMapper.xml]
-### The error may involve com.mrtn.fx.mybatis.repository.TradeMapper.findByTradingDate
+### The error may involve com.mrtn.fx.mybatis.repository.ext.TradeSearchMapper.findByTradingDate
 ### The error occurred while executing a query
 ### Cause: org.springframework.jdbc.CannotGetJdbcConnectionException: Failed to obtain JDBC Connection; nested exception is org.postgresql.util.PSQLException: 127.0.0.1:15432 への接続が拒絶されました。ホスト名とポート番号が正しいことと、postmaster がTCP/IP接続を受け付けていることを確認してください。] with root cause
 java.net.ConnectException: Connection refused (Connection refused)
@@ -3477,7 +3477,7 @@ Caused by: java.lang.IllegalArgumentException: Not a managed type: class com.mrt
 2020-12-28 14:50:34.267[restartedMain][INFO ][org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
 2020-12-28 14:50:35.077[restartedMain][INFO ][org.springframework.data.repository.config.RepositoryConfigurationDelegate] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 2020-12-28 14:50:35.141[restartedMain][INFO ][org.springframework.data.repository.config.RepositoryConfigurationDelegate] Finished Spring Data repository scanning in 55 ms. Found 2 JPA repository interfaces.
-2020-12-28 14:50:35.284[restartedMain][WARN ][org.mybatis.spring.mapper.ClassPathMapperScanner] Skipping MapperFactoryBean with name 'tradeRepository' and 'com.mrtn.fx.mybatis.repository.TradeMapper' mapperInterface. Bean already defined with the same name!
+2020-12-28 14:50:35.284[restartedMain][WARN ][org.mybatis.spring.mapper.ClassPathMapperScanner] Skipping MapperFactoryBean with name 'tradeRepository' and 'com.mrtn.fx.mybatis.repository.ext.TradeSearchMapper' mapperInterface. Bean already defined with the same name!
 2020-12-28 14:50:35.975[restartedMain][INFO ][org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port(s): 8080 (http)
 2020-12-28 14:50:35.986[restartedMain][INFO ][org.apache.coyote.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"]
 2020-12-28 14:50:35.987[restartedMain][INFO ][org.apache.catalina.core.StandardService] Starting service [Tomcat]
@@ -3547,7 +3547,7 @@ Caused by: org.hibernate.AnnotationException: No identifier specified for entity
 2020-12-28 14:52:46.069[restartedMain][INFO ][org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
 2020-12-28 14:52:46.822[restartedMain][INFO ][org.springframework.data.repository.config.RepositoryConfigurationDelegate] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
 2020-12-28 14:52:46.898[restartedMain][INFO ][org.springframework.data.repository.config.RepositoryConfigurationDelegate] Finished Spring Data repository scanning in 64 ms. Found 2 JPA repository interfaces.
-2020-12-28 14:52:47.028[restartedMain][WARN ][org.mybatis.spring.mapper.ClassPathMapperScanner] Skipping MapperFactoryBean with name 'tradeRepository' and 'com.mrtn.fx.mybatis.repository.TradeMapper' mapperInterface. Bean already defined with the same name!
+2020-12-28 14:52:47.028[restartedMain][WARN ][org.mybatis.spring.mapper.ClassPathMapperScanner] Skipping MapperFactoryBean with name 'tradeRepository' and 'com.mrtn.fx.mybatis.repository.ext.TradeSearchMapper' mapperInterface. Bean already defined with the same name!
 2020-12-28 14:52:47.751[restartedMain][INFO ][org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port(s): 8080 (http)
 2020-12-28 14:52:47.762[restartedMain][INFO ][org.apache.coyote.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"]
 2020-12-28 14:52:47.762[restartedMain][INFO ][org.apache.catalina.core.StandardService] Starting service [Tomcat]
@@ -3562,7 +3562,7 @@ Caused by: org.hibernate.AnnotationException: No identifier specified for entity
 2020-12-28 14:52:48.745[restartedMain][INFO ][org.hibernate.dialect.Dialect] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
 2020-12-28 14:52:49.385[restartedMain][INFO ][org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
 2020-12-28 14:52:49.393[restartedMain][INFO ][org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] Initialized JPA EntityManagerFactory for persistence unit 'default'
-2020-12-28 14:52:49.422[restartedMain][WARN ][org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'fxService': Unsatisfied dependency expressed through field 'tradeRepository'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.mrtn.fx.mybatis.repository.TradeMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2020-12-28 14:52:49.422[restartedMain][WARN ][org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'fxService': Unsatisfied dependency expressed through field 'tradeRepository'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.mrtn.fx.mybatis.repository.ext.TradeSearchMapper' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
 2020-12-28 14:52:49.422[restartedMain][INFO ][org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] Closing JPA EntityManagerFactory for persistence unit 'default'
 2020-12-28 14:52:49.425[restartedMain][INFO ][com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
 2020-12-28 14:52:49.432[restartedMain][INFO ][com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
@@ -3578,7 +3578,7 @@ APPLICATION FAILED TO START
 
 Description:
 
-Field tradeRepository in com.mrtn.fx.service.FxService required a bean of type 'com.mrtn.fx.mybatis.repository.TradeMapper' that could not be found.
+Field tradeRepository in com.mrtn.fx.service.FxService required a bean of type 'com.mrtn.fx.mybatis.repository.ext.TradeSearchMapper' that could not be found.
 
 The injection point has the following annotations:
 	- @org.springframework.beans.factory.annotation.Autowired(required=true)
@@ -3586,7 +3586,7 @@ The injection point has the following annotations:
 
 Action:
 
-Consider defining a bean of type 'com.mrtn.fx.mybatis.repository.TradeMapper' in your configuration.
+Consider defining a bean of type 'com.mrtn.fx.mybatis.repository.ext.TradeSearchMapper' in your configuration.
 
 2020-12-28 14:54:05.323[background-preinit][INFO ][org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 6.1.6.Final
 2020-12-28 14:54:05.336[restartedMain][INFO ][com.mrtn.fx.FxApplication] Starting FxApplication using Java 11.0.9.1 on macbook.local with PID 1841 (/Users/hmurotani/Documents/workspace/springboot-fx/out/production/classes started by hmurotani in /Users/hmurotani/Documents/workspace/springboot-fx)
@@ -4576,3 +4576,404 @@ org.postgresql.util.PSQLException: ERROR: syntax error at or near "FROM"
 2020-12-28 17:10:40.374[http-nio-8080-exec-6][INFO ][com.mrtn.fx.web.FxController] Trade取得 : 0件
 2020-12-28 17:10:40.374[http-nio-8080-exec-6][INFO ][com.mrtn.fx.web.FxController] --- edit end ---
 2020-12-28 18:08:53.107[HikariPool-8 housekeeper][WARN ][com.zaxxer.hikari.pool.HikariPool] HikariPool-8 - Thread starvation or clock leap detected (housekeeper delta=46m28s464ms).
+2020-12-28 18:38:29.376[SpringContextShutdownHook][INFO ][org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-12-28 18:38:29.376[SpringContextShutdownHook][INFO ][org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-12-28 18:38:29.376[SpringContextShutdownHook][INFO ][com.zaxxer.hikari.HikariDataSource] HikariPool-8 - Shutdown initiated...
+2020-12-28 18:38:29.378[SpringContextShutdownHook][INFO ][com.zaxxer.hikari.HikariDataSource] HikariPool-8 - Shutdown completed.
+2020-12-29 20:28:48.994[background-preinit][INFO ][org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 6.1.6.Final
+2020-12-29 20:28:49.005[restartedMain][INFO ][com.mrtn.fx.FxApplication] Starting FxApplication using Java 11.0.9.1 on macbook.local with PID 5461 (/Users/hmurotani/Documents/workspace/springboot-fx/out/production/classes started by hmurotani in /Users/hmurotani/Documents/workspace/springboot-fx)
+2020-12-29 20:28:49.006[restartedMain][INFO ][com.mrtn.fx.FxApplication] No active profile set, falling back to default profiles: default
+2020-12-29 20:28:49.071[restartedMain][INFO ][org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-12-29 20:28:49.071[restartedMain][INFO ][org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-12-29 20:28:50.066[restartedMain][INFO ][org.springframework.data.repository.config.RepositoryConfigurationDelegate] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-12-29 20:28:50.169[restartedMain][INFO ][org.springframework.data.repository.config.RepositoryConfigurationDelegate] Finished Spring Data repository scanning in 90 ms. Found 2 JPA repository interfaces.
+2020-12-29 20:28:51.013[restartedMain][INFO ][org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port(s): 8080 (http)
+2020-12-29 20:28:51.027[restartedMain][INFO ][org.apache.coyote.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"]
+2020-12-29 20:28:51.027[restartedMain][INFO ][org.apache.catalina.core.StandardService] Starting service [Tomcat]
+2020-12-29 20:28:51.028[restartedMain][INFO ][org.apache.catalina.core.StandardEngine] Starting Servlet engine: [Apache Tomcat/9.0.41]
+2020-12-29 20:28:51.182[restartedMain][INFO ][org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring embedded WebApplicationContext
+2020-12-29 20:28:51.182[restartedMain][INFO ][org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 2110 ms
+2020-12-29 20:28:51.451[restartedMain][INFO ][com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+2020-12-29 20:28:51.608[restartedMain][INFO ][com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+2020-12-29 20:28:51.679[restartedMain][INFO ][org.hibernate.jpa.internal.util.LogHelper] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-12-29 20:28:51.765[restartedMain][INFO ][org.hibernate.Version] HHH000412: Hibernate ORM core version 5.4.25.Final
+2020-12-29 20:28:51.993[restartedMain][INFO ][org.hibernate.annotations.common.Version] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2020-12-29 20:28:52.150[restartedMain][INFO ][org.hibernate.dialect.Dialect] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2020-12-29 20:28:52.907[restartedMain][INFO ][org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-12-29 20:28:52.920[restartedMain][INFO ][org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-12-29 20:28:53.169[restartedMain][WARN ][org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-12-29 20:28:53.288[restartedMain][INFO ][org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-29 20:28:53.936[restartedMain][INFO ][org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] LiveReload server is running on port 35729
+2020-12-29 20:28:53.952[restartedMain][INFO ][org.apache.coyote.http11.Http11NioProtocol] Starting ProtocolHandler ["http-nio-8080"]
+2020-12-29 20:28:53.988[restartedMain][INFO ][org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port(s): 8080 (http) with context path ''
+2020-12-29 20:28:54.000[restartedMain][INFO ][com.mrtn.fx.FxApplication] Started FxApplication in 5.687 seconds (JVM running for 7.067)
+2020-12-29 20:28:58.094[http-nio-8080-exec-1][INFO ][org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-12-29 20:28:58.094[http-nio-8080-exec-1][INFO ][org.springframework.web.servlet.DispatcherServlet] Initializing Servlet 'dispatcherServlet'
+2020-12-29 20:28:58.095[http-nio-8080-exec-1][INFO ][org.springframework.web.servlet.DispatcherServlet] Completed initialization in 1 ms
+2020-12-29 20:28:58.882[http-nio-8080-exec-8][INFO ][com.mrtn.fx.web.FxController] --- search start ---
+2020-12-29 20:28:58.892[http-nio-8080-exec-8][ERROR][org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet]] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.mrtn.fx.mybatis.repository.ext.TradeSearchMapper.findByTradingDate] with root cause
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.mrtn.fx.mybatis.repository.ext.TradeSearchMapper.findByTradingDate
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
+	at org.apache.ibatis.binding.MapperMethod.<init>(MapperMethod.java:53)
+	at org.apache.ibatis.binding.MapperProxy.lambda$cachedInvoker$0(MapperProxy.java:115)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1705)
+	at org.apache.ibatis.binding.MapperProxy.cachedInvoker(MapperProxy.java:102)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85)
+	at com.sun.proxy.$Proxy87.findByTradingDate(Unknown Source)
+	at com.mrtn.fx.service.FxServiceForMyBatis.search(FxServiceForMyBatis.java:48)
+	at com.mrtn.fx.web.FxController.search(FxController.java:64)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1061)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:961)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+2020-12-29 20:29:00.481[http-nio-8080-exec-3][INFO ][com.mrtn.fx.web.FxController] --- search start ---
+2020-12-29 20:29:00.482[http-nio-8080-exec-3][ERROR][org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet]] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.mrtn.fx.mybatis.repository.ext.TradeSearchMapper.findByTradingDate] with root cause
+org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.mrtn.fx.mybatis.repository.ext.TradeSearchMapper.findByTradingDate
+	at org.apache.ibatis.binding.MapperMethod$SqlCommand.<init>(MapperMethod.java:235)
+	at org.apache.ibatis.binding.MapperMethod.<init>(MapperMethod.java:53)
+	at org.apache.ibatis.binding.MapperProxy.lambda$cachedInvoker$0(MapperProxy.java:115)
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1705)
+	at org.apache.ibatis.binding.MapperProxy.cachedInvoker(MapperProxy.java:102)
+	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:85)
+	at com.sun.proxy.$Proxy87.findByTradingDate(Unknown Source)
+	at com.mrtn.fx.service.FxServiceForMyBatis.search(FxServiceForMyBatis.java:48)
+	at com.mrtn.fx.web.FxController.search(FxController.java:64)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:197)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:141)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:106)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:894)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1061)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:961)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:652)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:733)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:542)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:143)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:374)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:888)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1597)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+2020-12-29 20:29:31.724[Thread-6][INFO ][org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-12-29 20:29:31.725[Thread-6][INFO ][org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-12-29 20:29:31.729[Thread-6][INFO ][com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+2020-12-29 20:29:31.760[Thread-6][INFO ][com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+2020-12-29 20:29:31.881[restartedMain][INFO ][com.mrtn.fx.FxApplication] Starting FxApplication using Java 11.0.9.1 on macbook.local with PID 5461 (/Users/hmurotani/Documents/workspace/springboot-fx/out/production/classes started by hmurotani in /Users/hmurotani/Documents/workspace/springboot-fx)
+2020-12-29 20:29:31.882[restartedMain][INFO ][com.mrtn.fx.FxApplication] No active profile set, falling back to default profiles: default
+2020-12-29 20:29:32.205[restartedMain][INFO ][org.springframework.data.repository.config.RepositoryConfigurationDelegate] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2020-12-29 20:29:32.232[restartedMain][INFO ][org.springframework.data.repository.config.RepositoryConfigurationDelegate] Finished Spring Data repository scanning in 26 ms. Found 2 JPA repository interfaces.
+2020-12-29 20:29:32.433[restartedMain][INFO ][org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port(s): 8080 (http)
+2020-12-29 20:29:32.434[restartedMain][INFO ][org.apache.coyote.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"]
+2020-12-29 20:29:32.435[restartedMain][INFO ][org.apache.catalina.core.StandardService] Starting service [Tomcat]
+2020-12-29 20:29:32.435[restartedMain][INFO ][org.apache.catalina.core.StandardEngine] Starting Servlet engine: [Apache Tomcat/9.0.41]
+2020-12-29 20:29:32.456[restartedMain][INFO ][org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring embedded WebApplicationContext
+2020-12-29 20:29:32.456[restartedMain][INFO ][org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 570 ms
+2020-12-29 20:29:32.512[restartedMain][INFO ][com.zaxxer.hikari.HikariDataSource] HikariPool-2 - Starting...
+2020-12-29 20:29:32.531[restartedMain][INFO ][com.zaxxer.hikari.HikariDataSource] HikariPool-2 - Start completed.
+2020-12-29 20:29:32.538[restartedMain][INFO ][org.hibernate.jpa.internal.util.LogHelper] HHH000204: Processing PersistenceUnitInfo [name: default]
+2020-12-29 20:29:32.546[restartedMain][INFO ][org.hibernate.dialect.Dialect] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2020-12-29 20:29:32.670[restartedMain][INFO ][org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2020-12-29 20:29:32.670[restartedMain][INFO ][org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2020-12-29 20:29:32.955[restartedMain][WARN ][org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2020-12-29 20:29:33.016[restartedMain][INFO ][org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-29 20:29:33.174[restartedMain][INFO ][org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] LiveReload server is running on port 35729
+2020-12-29 20:29:33.186[restartedMain][INFO ][org.apache.coyote.http11.Http11NioProtocol] Starting ProtocolHandler ["http-nio-8080"]
+2020-12-29 20:29:33.191[restartedMain][INFO ][org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port(s): 8080 (http) with context path ''
+2020-12-29 20:29:33.198[restartedMain][INFO ][com.mrtn.fx.FxApplication] Started FxApplication in 1.376 seconds (JVM running for 46.266)
+2020-12-29 20:29:33.201[restartedMain][INFO ][org.springframework.boot.devtools.autoconfigure.ConditionEvaluationDeltaLoggingListener] Condition evaluation unchanged
+2020-12-29 20:29:39.397[http-nio-8080-exec-1][INFO ][org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-12-29 20:29:39.398[http-nio-8080-exec-1][INFO ][org.springframework.web.servlet.DispatcherServlet] Initializing Servlet 'dispatcherServlet'
+2020-12-29 20:29:39.399[http-nio-8080-exec-1][INFO ][org.springframework.web.servlet.DispatcherServlet] Completed initialization in 1 ms
+2020-12-29 20:29:39.471[http-nio-8080-exec-5][INFO ][com.mrtn.fx.web.FxController] --- search start ---
+2020-12-29 20:29:39.579[http-nio-8080-exec-5][INFO ][com.mrtn.fx.web.FxController] 検索結果 : 7件
+2020-12-29 20:29:39.580[http-nio-8080-exec-5][INFO ][com.mrtn.fx.web.FxController] --- search end ---
+2020-12-29 20:29:40.949[http-nio-8080-exec-10][INFO ][com.mrtn.fx.web.FxController] --- search start ---
+2020-12-29 20:29:40.958[http-nio-8080-exec-10][INFO ][com.mrtn.fx.web.FxController] 検索結果 : 7件
+2020-12-29 20:29:40.958[http-nio-8080-exec-10][INFO ][com.mrtn.fx.web.FxController] --- search end ---
+2020-12-29 20:29:44.595[http-nio-8080-exec-5][INFO ][com.mrtn.fx.web.FxController] --- search start ---
+2020-12-29 20:29:44.613[http-nio-8080-exec-5][INFO ][com.mrtn.fx.web.FxController] 検索結果 : 7件
+2020-12-29 20:29:44.613[http-nio-8080-exec-5][INFO ][com.mrtn.fx.web.FxController] --- search end ---
+2020-12-29 20:29:51.732[http-nio-8080-exec-10][INFO ][com.mrtn.fx.web.FxController] --- search start ---
+2020-12-29 20:29:51.739[http-nio-8080-exec-10][INFO ][com.mrtn.fx.web.FxController] 検索結果 : 7件
+2020-12-29 20:29:51.739[http-nio-8080-exec-10][INFO ][com.mrtn.fx.web.FxController] --- search end ---
+2020-12-29 20:29:55.730[http-nio-8080-exec-1][INFO ][com.mrtn.fx.web.FxController] --- search start ---
+2020-12-29 20:29:55.738[http-nio-8080-exec-1][INFO ][com.mrtn.fx.web.FxController] 検索結果 : 7件
+2020-12-29 20:29:55.738[http-nio-8080-exec-1][INFO ][com.mrtn.fx.web.FxController] --- search end ---
+2020-12-29 20:29:58.272[http-nio-8080-exec-4][INFO ][com.mrtn.fx.web.FxController] --- search start ---
+2020-12-29 20:29:58.280[http-nio-8080-exec-4][INFO ][com.mrtn.fx.web.FxController] 検索結果 : 7件
+2020-12-29 20:29:58.281[http-nio-8080-exec-4][INFO ][com.mrtn.fx.web.FxController] --- search end ---
+2020-12-29 20:30:07.140[http-nio-8080-exec-2][INFO ][com.mrtn.fx.web.FxController] --- edit start ---
+2020-12-29 20:30:07.148[http-nio-8080-exec-2][INFO ][com.mrtn.fx.web.FxController] 通貨ペア取得 : 9件
+2020-12-29 20:30:07.148[http-nio-8080-exec-2][INFO ][com.mrtn.fx.web.FxController] Trade取得 : 0件
+2020-12-29 20:30:07.148[http-nio-8080-exec-2][INFO ][com.mrtn.fx.web.FxController] --- edit end ---
+2020-12-29 20:30:10.039[http-nio-8080-exec-3][INFO ][com.mrtn.fx.web.FxController] --- edit start ---
+2020-12-29 20:30:10.047[http-nio-8080-exec-3][INFO ][com.mrtn.fx.web.FxController] 通貨ペア取得 : 9件
+2020-12-29 20:30:10.047[http-nio-8080-exec-3][INFO ][com.mrtn.fx.web.FxController] Trade取得 : 0件
+2020-12-29 20:30:10.047[http-nio-8080-exec-3][INFO ][com.mrtn.fx.web.FxController] --- edit end ---
+2020-12-29 20:30:13.801[http-nio-8080-exec-5][INFO ][com.mrtn.fx.web.FxController] --- edit start ---
+2020-12-29 20:30:13.807[http-nio-8080-exec-5][INFO ][com.mrtn.fx.web.FxController] 通貨ペア取得 : 9件
+2020-12-29 20:30:13.807[http-nio-8080-exec-5][INFO ][com.mrtn.fx.web.FxController] Trade取得 : 0件
+2020-12-29 20:30:13.807[http-nio-8080-exec-5][INFO ][com.mrtn.fx.web.FxController] --- edit end ---
+2020-12-29 20:31:12.501[SpringContextShutdownHook][INFO ][org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] Shutting down ExecutorService 'applicationTaskExecutor'
+2020-12-29 20:31:12.501[SpringContextShutdownHook][INFO ][org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] Closing JPA EntityManagerFactory for persistence unit 'default'
+2020-12-29 20:31:12.502[SpringContextShutdownHook][INFO ][com.zaxxer.hikari.HikariDataSource] HikariPool-2 - Shutdown initiated...
+2020-12-29 20:31:12.509[SpringContextShutdownHook][INFO ][com.zaxxer.hikari.HikariDataSource] HikariPool-2 - Shutdown completed.
+2021-01-04 13:48:44.520[background-preinit][INFO ][org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 6.1.6.Final
+2021-01-04 13:48:44.531[restartedMain][INFO ][com.mrtn.fx.FxApplication] Starting FxApplication using Java 11.0.9.1 on macbook.local with PID 1539 (/Users/hmurotani/Documents/workspace/springboot-fx/out/production/classes started by hmurotani in /Users/hmurotani/Documents/workspace/springboot-fx)
+2021-01-04 13:48:44.533[restartedMain][INFO ][com.mrtn.fx.FxApplication] No active profile set, falling back to default profiles: default
+2021-01-04 13:48:44.597[restartedMain][INFO ][org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-01-04 13:48:44.597[restartedMain][INFO ][org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-01-04 13:48:45.568[restartedMain][INFO ][org.springframework.data.repository.config.RepositoryConfigurationDelegate] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-01-04 13:48:45.676[restartedMain][INFO ][org.springframework.data.repository.config.RepositoryConfigurationDelegate] Finished Spring Data repository scanning in 90 ms. Found 2 JPA repository interfaces.
+2021-01-04 13:48:46.637[restartedMain][INFO ][org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port(s): 8080 (http)
+2021-01-04 13:48:46.651[restartedMain][INFO ][org.apache.coyote.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"]
+2021-01-04 13:48:46.652[restartedMain][INFO ][org.apache.catalina.core.StandardService] Starting service [Tomcat]
+2021-01-04 13:48:46.652[restartedMain][INFO ][org.apache.catalina.core.StandardEngine] Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-01-04 13:48:46.754[restartedMain][INFO ][org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring embedded WebApplicationContext
+2021-01-04 13:48:46.755[restartedMain][INFO ][org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 2157 ms
+2021-01-04 13:48:46.946[restartedMain][INFO ][com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+2021-01-04 13:48:47.107[restartedMain][INFO ][com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+2021-01-04 13:48:47.202[restartedMain][INFO ][org.hibernate.jpa.internal.util.LogHelper] HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-01-04 13:48:47.325[restartedMain][INFO ][org.hibernate.Version] HHH000412: Hibernate ORM core version 5.4.25.Final
+2021-01-04 13:48:47.583[restartedMain][INFO ][org.hibernate.annotations.common.Version] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-01-04 13:48:47.724[restartedMain][INFO ][org.hibernate.dialect.Dialect] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2021-01-04 13:48:48.453[restartedMain][INFO ][org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-01-04 13:48:48.462[restartedMain][INFO ][org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-01-04 13:48:48.717[restartedMain][WARN ][org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext] Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'fxController': Unsatisfied dependency expressed through field 'fxService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'fxService': Unsatisfied dependency expressed through field 'tradeSearchMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'tradeSearchMapper' defined in file [/Users/hmurotani/Documents/workspace/springboot-fx/out/production/classes/com/mrtn/fx/mybatis/repository/ext/TradeSearchMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [/Users/hmurotani/Documents/workspace/springboot-fx/out/production/resources/mapper/CurrencyPairMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [/Users/hmurotani/Documents/workspace/springboot-fx/out/production/resources/mapper/CurrencyPairMapper.xml]'. Cause: java.lang.IllegalArgumentException: Result Maps collection already contains value for com.mrtn.fx.mybatis.repository.CurrencyPairMapper.BaseResultMap
+2021-01-04 13:48:48.718[restartedMain][INFO ][org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-01-04 13:48:48.721[restartedMain][INFO ][com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+2021-01-04 13:48:48.730[restartedMain][INFO ][com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
+2021-01-04 13:48:48.733[restartedMain][INFO ][org.apache.catalina.core.StandardService] Stopping service [Tomcat]
+2021-01-04 13:48:48.750[restartedMain][INFO ][org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener] 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-01-04 13:48:48.777[restartedMain][ERROR][org.springframework.boot.SpringApplication] Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'fxController': Unsatisfied dependency expressed through field 'fxService'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'fxService': Unsatisfied dependency expressed through field 'tradeSearchMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'tradeSearchMapper' defined in file [/Users/hmurotani/Documents/workspace/springboot-fx/out/production/classes/com/mrtn/fx/mybatis/repository/ext/TradeSearchMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [/Users/hmurotani/Documents/workspace/springboot-fx/out/production/resources/mapper/CurrencyPairMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [/Users/hmurotani/Documents/workspace/springboot-fx/out/production/resources/mapper/CurrencyPairMapper.xml]'. Cause: java.lang.IllegalArgumentException: Result Maps collection already contains value for com.mrtn.fx.mybatis.repository.CurrencyPairMapper.BaseResultMap
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1415)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:608)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:923)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:588)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1309)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1298)
+	at com.mrtn.fx.FxApplication.main(FxApplication.java:14)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'fxService': Unsatisfied dependency expressed through field 'tradeSearchMapper'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'tradeSearchMapper' defined in file [/Users/hmurotani/Documents/workspace/springboot-fx/out/production/classes/com/mrtn/fx/mybatis/repository/ext/TradeSearchMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [/Users/hmurotani/Documents/workspace/springboot-fx/out/production/resources/mapper/CurrencyPairMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [/Users/hmurotani/Documents/workspace/springboot-fx/out/production/resources/mapper/CurrencyPairMapper.xml]'. Cause: java.lang.IllegalArgumentException: Result Maps collection already contains value for com.mrtn.fx.mybatis.repository.CurrencyPairMapper.BaseResultMap
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:643)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:119)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1415)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:608)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1367)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1287)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	... 25 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'tradeSearchMapper' defined in file [/Users/hmurotani/Documents/workspace/springboot-fx/out/production/classes/com/mrtn/fx/mybatis/repository/ext/TradeSearchMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [/Users/hmurotani/Documents/workspace/springboot-fx/out/production/resources/mapper/CurrencyPairMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [/Users/hmurotani/Documents/workspace/springboot-fx/out/production/resources/mapper/CurrencyPairMapper.xml]'. Cause: java.lang.IllegalArgumentException: Result Maps collection already contains value for com.mrtn.fx.mybatis.repository.CurrencyPairMapper.BaseResultMap
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1518)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1401)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:608)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1367)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1287)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:640)
+	... 38 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [org/mybatis/spring/boot/autoconfigure/MybatisAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [/Users/hmurotani/Documents/workspace/springboot-fx/out/production/resources/mapper/CurrencyPairMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [/Users/hmurotani/Documents/workspace/springboot-fx/out/production/resources/mapper/CurrencyPairMapper.xml]'. Cause: java.lang.IllegalArgumentException: Result Maps collection already contains value for com.mrtn.fx.mybatis.repository.CurrencyPairMapper.BaseResultMap
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:658)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:638)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1336)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1179)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:571)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:276)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1367)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1287)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireByType(AbstractAutowireCapableBeanFactory.java:1503)
+	... 49 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.apache.ibatis.session.SqlSessionFactory]: Factory method 'sqlSessionFactory' threw exception; nested exception is org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [/Users/hmurotani/Documents/workspace/springboot-fx/out/production/resources/mapper/CurrencyPairMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [/Users/hmurotani/Documents/workspace/springboot-fx/out/production/resources/mapper/CurrencyPairMapper.xml]'. Cause: java.lang.IllegalArgumentException: Result Maps collection already contains value for com.mrtn.fx.mybatis.repository.CurrencyPairMapper.BaseResultMap
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653)
+	... 62 common frames omitted
+Caused by: org.springframework.core.NestedIOException: Failed to parse mapping resource: 'file [/Users/hmurotani/Documents/workspace/springboot-fx/out/production/resources/mapper/CurrencyPairMapper.xml]'; nested exception is org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [/Users/hmurotani/Documents/workspace/springboot-fx/out/production/resources/mapper/CurrencyPairMapper.xml]'. Cause: java.lang.IllegalArgumentException: Result Maps collection already contains value for com.mrtn.fx.mybatis.repository.CurrencyPairMapper.BaseResultMap
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:613)
+	at org.mybatis.spring.SqlSessionFactoryBean.afterPropertiesSet(SqlSessionFactoryBean.java:491)
+	at org.mybatis.spring.SqlSessionFactoryBean.getObject(SqlSessionFactoryBean.java:633)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration.sqlSessionFactory(MybatisAutoConfiguration.java:179)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$c0bbe1d.CGLIB$sqlSessionFactory$1(<generated>)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$c0bbe1d$$FastClassBySpringCGLIB$$9962e13d.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331)
+	at org.mybatis.spring.boot.autoconfigure.MybatisAutoConfiguration$$EnhancerBySpringCGLIB$$c0bbe1d.sqlSessionFactory(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 63 common frames omitted
+Caused by: org.apache.ibatis.builder.BuilderException: Error parsing Mapper XML. The XML location is 'file [/Users/hmurotani/Documents/workspace/springboot-fx/out/production/resources/mapper/CurrencyPairMapper.xml]'. Cause: java.lang.IllegalArgumentException: Result Maps collection already contains value for com.mrtn.fx.mybatis.repository.CurrencyPairMapper.BaseResultMap
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:123)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.parse(XMLMapperBuilder.java:95)
+	at org.mybatis.spring.SqlSessionFactoryBean.buildSqlSessionFactory(SqlSessionFactoryBean.java:611)
+	... 76 common frames omitted
+Caused by: java.lang.IllegalArgumentException: Result Maps collection already contains value for com.mrtn.fx.mybatis.repository.CurrencyPairMapper.BaseResultMap
+	at org.apache.ibatis.session.Configuration$StrictMap.put(Configuration.java:1014)
+	at org.apache.ibatis.session.Configuration$StrictMap.put(Configuration.java:970)
+	at org.apache.ibatis.session.Configuration.addResultMap(Configuration.java:726)
+	at org.apache.ibatis.builder.MapperBuilderAssistant.addResultMap(MapperBuilderAssistant.java:209)
+	at org.apache.ibatis.builder.ResultMapResolver.resolve(ResultMapResolver.java:47)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:289)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElement(XMLMapperBuilder.java:254)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.resultMapElements(XMLMapperBuilder.java:246)
+	at org.apache.ibatis.builder.xml.XMLMapperBuilder.configurationElement(XMLMapperBuilder.java:119)
+	... 78 common frames omitted
+2021-01-04 14:09:13.114[background-preinit][INFO ][org.hibernate.validator.internal.util.Version] HV000001: Hibernate Validator 6.1.6.Final
+2021-01-04 14:09:13.148[restartedMain][INFO ][com.mrtn.fx.FxApplication] Starting FxApplication using Java 11.0.9.1 on macbook.local with PID 1568 (/Users/hmurotani/Documents/workspace/springboot-fx/out/production/classes started by hmurotani in /Users/hmurotani/Documents/workspace/springboot-fx)
+2021-01-04 14:09:13.149[restartedMain][INFO ][com.mrtn.fx.FxApplication] No active profile set, falling back to default profiles: default
+2021-01-04 14:09:13.205[restartedMain][INFO ][org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-01-04 14:09:13.205[restartedMain][INFO ][org.springframework.boot.devtools.env.DevToolsPropertyDefaultsPostProcessor] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-01-04 14:09:13.969[restartedMain][INFO ][org.springframework.data.repository.config.RepositoryConfigurationDelegate] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-01-04 14:09:14.039[restartedMain][INFO ][org.springframework.data.repository.config.RepositoryConfigurationDelegate] Finished Spring Data repository scanning in 60 ms. Found 2 JPA repository interfaces.
+2021-01-04 14:09:14.927[restartedMain][INFO ][org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat initialized with port(s): 8080 (http)
+2021-01-04 14:09:14.938[restartedMain][INFO ][org.apache.coyote.http11.Http11NioProtocol] Initializing ProtocolHandler ["http-nio-8080"]
+2021-01-04 14:09:14.938[restartedMain][INFO ][org.apache.catalina.core.StandardService] Starting service [Tomcat]
+2021-01-04 14:09:14.938[restartedMain][INFO ][org.apache.catalina.core.StandardEngine] Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-01-04 14:09:15.061[restartedMain][INFO ][org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring embedded WebApplicationContext
+2021-01-04 14:09:15.062[restartedMain][INFO ][org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext] Root WebApplicationContext: initialization completed in 1856 ms
+2021-01-04 14:09:15.223[restartedMain][INFO ][com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Starting...
+2021-01-04 14:09:15.354[restartedMain][INFO ][com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Start completed.
+2021-01-04 14:09:15.426[restartedMain][INFO ][org.hibernate.jpa.internal.util.LogHelper] HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-01-04 14:09:15.523[restartedMain][INFO ][org.hibernate.Version] HHH000412: Hibernate ORM core version 5.4.25.Final
+2021-01-04 14:09:15.732[restartedMain][INFO ][org.hibernate.annotations.common.Version] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-01-04 14:09:15.884[restartedMain][INFO ][org.hibernate.dialect.Dialect] HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+2021-01-04 14:09:16.523[restartedMain][INFO ][org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-01-04 14:09:16.530[restartedMain][INFO ][org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-01-04 14:09:16.887[restartedMain][WARN ][org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-01-04 14:09:17.000[restartedMain][INFO ][org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-04 14:09:17.624[restartedMain][INFO ][org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer] LiveReload server is running on port 35729
+2021-01-04 14:09:17.637[restartedMain][INFO ][org.apache.coyote.http11.Http11NioProtocol] Starting ProtocolHandler ["http-nio-8080"]
+2021-01-04 14:09:17.670[restartedMain][INFO ][org.springframework.boot.web.embedded.tomcat.TomcatWebServer] Tomcat started on port(s): 8080 (http) with context path ''
+2021-01-04 14:09:17.682[restartedMain][INFO ][com.mrtn.fx.FxApplication] Started FxApplication in 5.35 seconds (JVM running for 6.062)
+2021-01-04 14:09:26.595[http-nio-8080-exec-1][INFO ][org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/]] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-01-04 14:09:26.596[http-nio-8080-exec-1][INFO ][org.springframework.web.servlet.DispatcherServlet] Initializing Servlet 'dispatcherServlet'
+2021-01-04 14:09:26.597[http-nio-8080-exec-1][INFO ][org.springframework.web.servlet.DispatcherServlet] Completed initialization in 1 ms
+2021-01-04 14:09:28.279[http-nio-8080-exec-8][INFO ][com.mrtn.fx.web.FxController] --- search start ---
+2021-01-04 14:09:28.375[http-nio-8080-exec-8][INFO ][com.mrtn.fx.web.FxController] 検索結果 : 7件
+2021-01-04 14:09:28.375[http-nio-8080-exec-8][INFO ][com.mrtn.fx.web.FxController] --- search end ---
+2021-01-04 14:09:33.152[http-nio-8080-exec-10][INFO ][com.mrtn.fx.web.FxController] --- new start ---
+2021-01-04 14:09:33.159[http-nio-8080-exec-10][INFO ][com.mrtn.fx.web.FxController] 通貨ペア取得 : 9件
+2021-01-04 14:09:33.159[http-nio-8080-exec-10][INFO ][com.mrtn.fx.web.FxController] --- new end ---
+2021-01-04 14:09:45.304[SpringContextShutdownHook][INFO ][org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor] Shutting down ExecutorService 'applicationTaskExecutor'
+2021-01-04 14:09:45.306[SpringContextShutdownHook][INFO ][org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean] Closing JPA EntityManagerFactory for persistence unit 'default'
+2021-01-04 14:09:45.309[SpringContextShutdownHook][INFO ][com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown initiated...
+2021-01-04 14:09:45.317[SpringContextShutdownHook][INFO ][com.zaxxer.hikari.HikariDataSource] HikariPool-1 - Shutdown completed.
