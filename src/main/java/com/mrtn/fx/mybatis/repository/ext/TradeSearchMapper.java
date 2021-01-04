@@ -6,9 +6,13 @@ import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
+/**
+ * Tradeの検索用Mapper
+ */
 @Mapper
 public interface TradeSearchMapper {
 
+    /** 検索 */
     public List<TradeList> findByTradingDate(
             @Param("fromDate") String fromDate,
             @Param("toDate") String ToDate

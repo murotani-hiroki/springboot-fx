@@ -20,6 +20,18 @@
             trade t
         INNER JOIN currency_pair c ON
             t.currency_pair_id = c.id
+        <where>
+            <if test="fromDate != null and fromDate != ''">
+                <![CDATA[
+                trading_date >= cast(#{fromDate} as date)
+                ]]>
+            </if>
+            <if test="toDate != null and toDate != ''">
+                <![CDATA[
+                AND trading_date <= cast(#{toDate} as date)
+                ]]>
+            </if>
+        </where>
         ORDER BY
             trading_date
     </select>

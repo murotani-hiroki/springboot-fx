@@ -5,8 +5,11 @@ import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
 
+/**
+ * CurrencyPairの検索用Mapper
+ */
 @Mapper
 public interface CurrencyPairSearchMapper {
-    //@Select("select * from currency_pair")
+    /** 検索 */
     public List<CurrencyPair> findAll();
 }

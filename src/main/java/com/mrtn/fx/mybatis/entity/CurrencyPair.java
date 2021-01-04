@@ -1,5 +1,8 @@
 package com.mrtn.fx.mybatis.entity;
 
+/**
+ * 自動生成したCurrencyPair用Entity
+ */
 public class CurrencyPair {
     private Integer id;
 

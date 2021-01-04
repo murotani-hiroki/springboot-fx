@@ -2,14 +2,16 @@ package com.mrtn.fx.service;
 
 import com.mrtn.fx.model.CurrencyPair;
 import com.mrtn.fx.model.Trade;
+import com.mrtn.fx.mybatis.repository.TradeMapper;
 import com.mrtn.fx.mybatis.repository.ext.CurrencyPairSearchMapper;
 import com.mrtn.fx.mybatis.repository.ext.TradeSearchMapper;
 import com.mrtn.fx.web.SaveForm;
 import com.mrtn.fx.web.SearchForm;
-import org.apache.logging.log4j.util.Strings;
 import org.modelmapper.Converter;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.spi.MappingContext;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.text.ParseException;
@@ -20,11 +22,15 @@ import java.util.List;
 
 public class FxServiceForMyBatis implements FxService {
 
-    /** TradeRepository */
+    /** TradeMapper */
+    @Autowired
+    private TradeMapper tradeMapper;
+
+    /** TradeSearchMapper */
     @Autowired
     private TradeSearchMapper tradeSearchMapper;
 
-    /** CurrencyPairRepository */
+    /** CurrencyPairMapper */
     @Autowired
     private CurrencyPairSearchMapper currencyPairSearchMapper;
 
@@ -34,6 +40,9 @@ public class FxServiceForMyBatis implements FxService {
     /** Date Formatter */
     private SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
 
+
+    private Logger logger = LoggerFactory.getLogger(FxServiceForMyBatis.class);
+
     /**
      * 一覧検索
      * @param form　検索条件
@@ -41,11 +50,10 @@ public class FxServiceForMyBatis implements FxService {
      */
     public List<Trade> search(SearchForm form) {
         //TODO formはDTOに移す。
-        // From To の指定が無ければ、Min値 Max値 で検索する。
-        String fromDate = Strings.isNotBlank(form.getFromDate()) ? form.getFromDate() : "1970-01-01";
-        String toDate = Strings.isNotBlank(form.getToDate()) ? form.getToDate() : "9999-12-31";
+        logger.info("fromDate: {}", form.getFromDate());
+        logger.info("toDate: {}", form.getToDate());
         List<Trade> results = new ArrayList<>();
-        tradeSearchMapper.findByTradingDate(fromDate, toDate).forEach(entity -> {
+        tradeSearchMapper.findByTradingDate(form.getFromDate(), form.getToDate()).forEach(entity -> {
             results.add(modelMapper.map(entity, Trade.class));
         });
         return results;
@@ -57,12 +65,9 @@ public class FxServiceForMyBatis implements FxService {
      * @return 検索結果
      */
     public Trade find(Integer id) {
-        /*
-        com.mrtn.fx.jpa.entity.Trade trade = tradeRepository.findById(id).get();
+        com.mrtn.fx.mybatis.entity.Trade trade = tradeMapper.selectByPrimaryKey(id);
         Trade result = modelMapper.map(trade, Trade.class);
         return result;
-         */
-        return null;
     }
 
     /**
@@ -96,9 +101,13 @@ public class FxServiceForMyBatis implements FxService {
                 }
             }
         });
-        com.mrtn.fx.jpa.entity.Trade trade = modelMapper.map(form, com.mrtn.fx.jpa.entity.Trade.class);
+        com.mrtn.fx.mybatis.entity.Trade trade = modelMapper.map(form, com.mrtn.fx.mybatis.entity.Trade.class);
 
-        //tradeRepository.save(trade);
+        if (trade.getId() == null) {
+            tradeMapper.insertSelective(trade);
+        } else {
+            tradeMapper.updateByPrimaryKeySelective(trade);
+        }
     }
 
     /**
@@ -119,7 +128,7 @@ public class FxServiceForMyBatis implements FxService {
      */
     public void delete(String[] deleteIds) {
         for (String id : deleteIds) {
-            //tradeRepository.deleteById(Integer.valueOf(id));
+            tradeMapper.deleteByPrimaryKey(Integer.valueOf(id));
         }
     }
 }

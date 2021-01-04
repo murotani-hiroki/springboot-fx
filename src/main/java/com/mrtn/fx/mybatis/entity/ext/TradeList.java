@@ -4,6 +4,9 @@ import lombok.Data;
 
 import java.util.Date;
 
+/**
+ * Trade検索用のEntity
+ */
 @Data
 public class TradeList {
 

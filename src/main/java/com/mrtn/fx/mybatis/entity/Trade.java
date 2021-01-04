@@ -3,6 +3,9 @@ package com.mrtn.fx.mybatis.entity;
 import java.math.BigDecimal;
 import java.util.Date;
 
+/**
+ * 自動生成したTrade用Entity
+ */
 public class Trade {
     private Integer id;
 

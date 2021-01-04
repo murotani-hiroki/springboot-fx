@@ -2,6 +2,9 @@ package com.mrtn.fx.model;
 
 import lombok.Data;
 
+/**
+ * CurrencyPair検索の表示用Model
+ */
 @Data
 public class CurrencyPair {
 
