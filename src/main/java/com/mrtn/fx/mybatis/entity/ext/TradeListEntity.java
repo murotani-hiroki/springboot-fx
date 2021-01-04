@@ -8,7 +8,7 @@ import java.util.Date;
  * Trade検索用のEntity
  */
 @Data
-public class TradeList {
+public class TradeListEntity {
 
     /** ID */
     private Integer id;

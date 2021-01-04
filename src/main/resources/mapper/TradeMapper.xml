@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.mrtn.fx.mybatis.repository.TradeMapper">
-  <resultMap id="BaseResultMap" type="com.mrtn.fx.mybatis.entity.Trade">
+  <resultMap id="BaseResultMap" type="com.mrtn.fx.mybatis.entity.TradeEntity">
     <id column="id" jdbcType="INTEGER" property="id" />
     <result column="trading_date" jdbcType="DATE" property="tradingDate" />
     <result column="settlement_date" jdbcType="DATE" property="settlementDate" />
@@ -29,7 +29,7 @@
     delete from public.trade
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.mrtn.fx.mybatis.entity.Trade">
+  <insert id="insert" parameterType="com.mrtn.fx.mybatis.entity.TradeEntity">
     insert into public.trade (id, trading_date, settlement_date, 
       currency_pair_id, trade_type, quantity, 
       entry_price, exit_price, stop_loss, 
@@ -41,7 +41,7 @@
       #{profit,jdbcType=NUMERIC}, #{comment,jdbcType=VARCHAR}, #{imageId,jdbcType=INTEGER}
       )
   </insert>
-  <insert id="insertSelective" parameterType="com.mrtn.fx.mybatis.entity.Trade">
+  <insert id="insertSelective" parameterType="com.mrtn.fx.mybatis.entity.TradeEntity">
     insert into public.trade
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">
@@ -120,7 +120,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.mrtn.fx.mybatis.entity.Trade">
+  <update id="updateByPrimaryKeySelective" parameterType="com.mrtn.fx.mybatis.entity.TradeEntity">
     update public.trade
     <set>
       <if test="tradingDate != null">
@@ -159,7 +159,7 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.mrtn.fx.mybatis.entity.Trade">
+  <update id="updateByPrimaryKey" parameterType="com.mrtn.fx.mybatis.entity.TradeEntity">
     update public.trade
     set trading_date = #{tradingDate,jdbcType=DATE},
       settlement_date = #{settlementDate,jdbcType=DATE},

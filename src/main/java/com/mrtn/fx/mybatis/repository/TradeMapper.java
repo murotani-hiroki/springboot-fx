@@ -1,6 +1,6 @@
 package com.mrtn.fx.mybatis.repository;
 
-import com.mrtn.fx.mybatis.entity.Trade;
+import com.mrtn.fx.mybatis.entity.TradeEntity;
 import org.apache.ibatis.annotations.Mapper;
 
 /**
@@ -12,17 +12,17 @@ public interface TradeMapper {
     int deleteByPrimaryKey(Integer id);
 
     /** 未使用 */
-    int insert(Trade record);
+    int insert(TradeEntity record);
 
     /** 新規登録 */
-    int insertSelective(Trade record);
+    int insertSelective(TradeEntity record);
 
     /** IDで検索 */
-    Trade selectByPrimaryKey(Integer id);
+    TradeEntity selectByPrimaryKey(Integer id);
 
     /** 更新 */
-    int updateByPrimaryKeySelective(Trade record);
+    int updateByPrimaryKeySelective(TradeEntity record);
 
     /** 未使用 */
-    int updateByPrimaryKey(Trade record);
+    int updateByPrimaryKey(TradeEntity record);
 }

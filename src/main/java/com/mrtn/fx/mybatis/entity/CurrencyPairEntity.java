@@ -3,7 +3,7 @@ package com.mrtn.fx.mybatis.entity;
 /**
  * 自動生成したCurrencyPair用Entity
  */
-public class CurrencyPair {
+public class CurrencyPairEntity {
     private Integer id;
 
     private String currencyPair;

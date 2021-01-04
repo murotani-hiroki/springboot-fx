@@ -29,8 +29,8 @@
                 type="XMLMAPPER"
         />
 
-        <table schema="public" tableName="trade" domainObjectName="Trade" mapperName="TradeMapper" enableSelectByExample="false" enableDeleteByExample="false" enableCountByExample="false" enableUpdateByExample="false" selectByExampleQueryId="false" />
-        <table schema="public" tableName="currency_pair" domainObjectName="CurrencyPair" mapperName="CurrencyPairMapper" enableSelectByExample="false" enableDeleteByExample="false" enableCountByExample="false" enableUpdateByExample="false" selectByExampleQueryId="false" />
+        <table schema="public" tableName="trade" domainObjectName="TradeEntity" mapperName="TradeMapper" enableSelectByExample="false" enableDeleteByExample="false" enableCountByExample="false" enableUpdateByExample="false" selectByExampleQueryId="false" />
+        <table schema="public" tableName="currency_pair" domainObjectName="CurrencyPairEntity" mapperName="CurrencyPairMapper" enableSelectByExample="false" enableDeleteByExample="false" enableCountByExample="false" enableUpdateByExample="false" selectByExampleQueryId="false" />
 
     </context>
 </generatorConfiguration>

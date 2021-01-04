@@ -1,6 +1,6 @@
 package com.mrtn.fx.mybatis.repository.ext;
 
-import com.mrtn.fx.mybatis.entity.CurrencyPair;
+import com.mrtn.fx.mybatis.entity.CurrencyPairEntity;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
@@ -11,5 +11,5 @@ import java.util.List;
 @Mapper
 public interface CurrencyPairSearchMapper {
     /** 検索 */
-    public List<CurrencyPair> findAll();
+    public List<CurrencyPairEntity> findAll();
 }

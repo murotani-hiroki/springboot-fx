@@ -2,6 +2,7 @@ package com.mrtn.fx.service;
 
 import com.mrtn.fx.model.CurrencyPair;
 import com.mrtn.fx.model.Trade;
+import com.mrtn.fx.mybatis.entity.TradeEntity;
 import com.mrtn.fx.mybatis.repository.TradeMapper;
 import com.mrtn.fx.mybatis.repository.ext.CurrencyPairSearchMapper;
 import com.mrtn.fx.mybatis.repository.ext.TradeSearchMapper;
@@ -65,8 +66,8 @@ public class FxServiceForMyBatis implements FxService {
      * @return 検索結果
      */
     public Trade find(Integer id) {
-        com.mrtn.fx.mybatis.entity.Trade trade = tradeMapper.selectByPrimaryKey(id);
-        Trade result = modelMapper.map(trade, Trade.class);
+        TradeEntity tradeEntity = tradeMapper.selectByPrimaryKey(id);
+        Trade result = modelMapper.map(tradeEntity, Trade.class);
         return result;
     }
 
@@ -101,12 +102,14 @@ public class FxServiceForMyBatis implements FxService {
                 }
             }
         });
-        com.mrtn.fx.mybatis.entity.Trade trade = modelMapper.map(form, com.mrtn.fx.mybatis.entity.Trade.class);
+        TradeEntity tradeEntity = modelMapper.map(form, TradeEntity.class);
 
-        if (trade.getId() == null) {
-            tradeMapper.insertSelective(trade);
+        if (tradeEntity.getId() == null) {
+            // 新規登録
+            tradeMapper.insertSelective(tradeEntity);
         } else {
-            tradeMapper.updateByPrimaryKeySelective(trade);
+            // 更新
+            tradeMapper.updateByPrimaryKeySelective(tradeEntity);
         }
     }
 

@@ -6,7 +6,7 @@ import java.util.Date;
 /**
  * 自動生成したTrade用Entity
  */
-public class Trade {
+public class TradeEntity {
     private Integer id;
 
     private Date tradingDate;
