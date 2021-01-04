@@ -1,6 +1,6 @@
 package com.mrtn.fx;
 
-import com.mrtn.fx.jpa.entity.Trade;
+import com.mrtn.fx.jpa.entity.TradeEntity;
 import com.mrtn.fx.web.SaveForm;
 import org.junit.jupiter.api.Test;
 import org.modelmapper.Converter;
@@ -13,7 +13,6 @@ import java.util.Date;
 
 import static org.hamcrest.CoreMatchers.*;
 import static org.hamcrest.MatcherAssert.*;
-import static org.junit.jupiter.api.Assertions.*;
 
 class SampleTest {
 
@@ -44,7 +43,7 @@ class SampleTest {
 				}
 			}
 		});
-		Trade trade = modelMapper.map(form, Trade.class);
+		TradeEntity trade = modelMapper.map(form, TradeEntity.class);
 
 		assertThat(trade.getTradingDate(), is(new SimpleDateFormat("yyyyMMdd").parse("20201224")));
 		assertThat(trade.getSettlementDate(), is(new SimpleDateFormat("yyyyMMdd").parse("20201225")));
