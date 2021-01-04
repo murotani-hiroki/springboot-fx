@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mrtn.fx.mybatis.repository.CurrencyPairMapper">
+  <resultMap id="BaseResultMap" type="com.mrtn.fx.mybatis.entity.CurrencyPairEntity">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="currency_pair" jdbcType="VARCHAR" property="currencyPair" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, currency_pair
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from public.currency_pair
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from public.currency_pair
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.mrtn.fx.mybatis.entity.CurrencyPairEntity">
+    insert into public.currency_pair (id, currency_pair)
+    values (#{id,jdbcType=INTEGER}, #{currencyPair,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.mrtn.fx.mybatis.entity.CurrencyPairEntity">
+    insert into public.currency_pair
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="currencyPair != null">
+        currency_pair,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="currencyPair != null">
+        #{currencyPair,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.mrtn.fx.mybatis.entity.CurrencyPairEntity">
+    update public.currency_pair
+    <set>
+      <if test="currencyPair != null">
+        currency_pair = #{currencyPair,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.mrtn.fx.mybatis.entity.CurrencyPairEntity">
+    update public.currency_pair
+    set currency_pair = #{currencyPair,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

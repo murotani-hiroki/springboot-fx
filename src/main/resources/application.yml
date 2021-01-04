@@ -1,19 +1,29 @@
 spring:
   jpa:
     database: POSTGRESQL
-  #※これだと何故かうまくいかないので、DatabaseConfig.class で Datasourceをインジェクションしている
+  #※これだと何故かうまくいかないので、DatabaseConfig.java で Datasourceをインジェクションしている
   #datasource:
     #driverClassName: org.postgresql.Driver
     #url: jdbc:postgresql://127.0.0.1:15432/postgres
-    #username: postgres
+    #username: postgres  ← これが渡っていないと思われる。
     #password: muro1968
 
   #※MessageUtilに実装している
   #messages:
   #  basename: messages
 
+# DatabaseConfig.javaの設定値
 fxdb:
   driverClassName: org.postgresql.Driver
   url: jdbc:postgresql://127.0.0.1:15432/fxdb
   username: postgres
   password: muro1968
+
+
+# MyBatisの設定
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+  mapper-locations: classpath*:/mapper/**/*.xml
+
+

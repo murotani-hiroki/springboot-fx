@@ -6,6 +6,9 @@ import lombok.Data;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+/**
+ * Trade検索の表示用Model
+ */
 @Data
 public class Trade {
 

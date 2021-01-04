@@ -3,6 +3,7 @@ package com.mrtn.fx.web;
 import com.mrtn.fx.model.CurrencyPair;
 import com.mrtn.fx.model.Trade;
 import com.mrtn.fx.service.FxService;
+import com.mrtn.fx.service.FxServiceForJpa;
 import com.mrtn.fx.util.MessageUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE logback>
 <configuration>
-	<property name="logFilePath" value="/Users/hmurotani/Documents/workspace/springboot-fx/src/main/resources/log" />
+	<property name="logFilePath" value="/Users/hmurotani/Documents/workspace/springboot-fx/log" />
 
 	<appender name="FILE"
 		class="ch.qos.logback.core.rolling.RollingFileAppender">
@@ -21,7 +21,7 @@
 		</encoder>
 	</appender>
 
-	<root level="INFO">
+	<root level="info">
 		<appender-ref ref="FILE" />
 		<appender-ref ref="STDOUT" />
 	</root>
