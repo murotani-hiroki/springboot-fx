@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.text.MessageFormat;
 import java.util.List;
 
 @Controller
@@ -159,7 +160,11 @@ public class FxController {
             // エラーの場合
             for (FieldError fieldError : bindingResult.getFieldErrors()) {
                 logger.info("{} : {}", fieldError.getField(), fieldError.getDefaultMessage());
-                form.getErrors().add(fieldError.getDefaultMessage());
+                // tradingDate=取引日 の定義から「取引日」を取得する。
+                String fieldName = MessageUtil.getMessage(fieldError.getField());
+                // {0}を入力して下さい → 取引日を入力して下さい
+                String errorMssage = MessageFormat.format(fieldError.getDefaultMessage(), fieldName);
+                form.getErrors().add(errorMssage);
             }
             return false;
         }
