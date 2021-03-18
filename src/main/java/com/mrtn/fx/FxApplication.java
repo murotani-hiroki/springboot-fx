@@ -16,7 +16,7 @@ public class FxApplication {
 
 	@Bean
 	public FxService fxService() {
-		return new FxServiceForJpa();
-		//return new FxServiceForMyBatis();
+		return new FxServiceForJpa();          // for JPA
+		//return new FxServiceForMyBatis();    // for MyBatis
 	}
 }
