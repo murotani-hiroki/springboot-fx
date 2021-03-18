@@ -7,6 +7,7 @@ import javax.validation.ConstraintValidatorContext;
 import java.util.Arrays;
 import java.util.List;
 
+// カスタムバリデーター
 public class CustomConstraintValidator implements ConstraintValidator<CustomContains, Object> {
 
     private String message;
