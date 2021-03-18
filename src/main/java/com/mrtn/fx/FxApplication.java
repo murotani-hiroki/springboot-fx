@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
 import com.mrtn.fx.service.FxService;
-import com.mrtn.fx.service.FxServiceForJpa;
+import com.mrtn.fx.service.FxServiceForMyBatis;
 
 @SpringBootApplication
 public class FxApplication {
@@ -16,7 +16,7 @@ public class FxApplication {
 
 	@Bean
 	public FxService fxService() {
-		return new FxServiceForJpa();          // for JPA use..
-		//return new FxServiceForMyBatis();    // for MyBatis use..
+		//return new FxServiceForJpa();          // for JPA use..
+		return new FxServiceForMyBatis();    // for MyBatis use..
 	}
 }
