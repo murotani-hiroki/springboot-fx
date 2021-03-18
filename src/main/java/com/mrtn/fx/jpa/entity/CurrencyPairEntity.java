@@ -9,7 +9,7 @@ import javax.persistence.Table;
 @Data
 @Entity
 @Table(name = "currency_pair")
-public class CurrencyPair {
+public class CurrencyPairEntity {
 
     /** ID */
     @Id

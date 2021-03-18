@@ -8,7 +8,7 @@ import java.util.Date;
 @Data
 @Entity
 @Table(name = "trade")
-public class Trade {
+public class TradeEntity {
 
     /** ID */
     @Id
@@ -27,7 +27,7 @@ public class Trade {
     /** 通貨ペア */
     @ManyToOne
     @JoinColumn(name = "currency_pair_id")
-    private CurrencyPair currencyPair;
+    private CurrencyPairEntity currencyPair;
 
     /** Ask/Bid */
     //TODO enum化する。

@@ -1,5 +1,6 @@
 package com.mrtn.fx.service;
 
+import com.mrtn.fx.jpa.entity.TradeEntity;
 import com.mrtn.fx.jpa.repository.CurrencyPairRepository;
 import com.mrtn.fx.jpa.repository.TradeRepository;
 import com.mrtn.fx.model.CurrencyPair;
@@ -10,6 +11,8 @@ import org.apache.logging.log4j.util.Strings;
 import org.modelmapper.Converter;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.spi.MappingContext;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.text.ParseException;
@@ -34,6 +37,8 @@ public class FxServiceForJpa implements FxService {
     /** Date Formatter */
     private SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
 
+    private Logger logger = LoggerFactory.getLogger(FxServiceForJpa.class);
+
     /**
      * 一覧検索
      * @param form　検索条件
@@ -42,6 +47,8 @@ public class FxServiceForJpa implements FxService {
     public List<Trade> search(SearchForm form) {
         //TODO formはDTOに移す。
         // From To の指定が無ければ、Min値 Max値 で検索する。
+        logger.info("fromDate: {}", form.getFromDate());
+        logger.info("toDate: {}", form.getToDate());
         String fromDateStr = Strings.isNotBlank(form.getFromDate()) ? form.getFromDate() : "1970-01-01";
         String toDateStr = Strings.isNotBlank(form.getToDate()) ? form.getToDate() : "9999-12-31";
         Date fromDate = null;
@@ -71,8 +78,8 @@ public class FxServiceForJpa implements FxService {
      * @return 検索結果
      */
     public Trade find(Integer id) {
-        com.mrtn.fx.jpa.entity.Trade trade = tradeRepository.findById(id).get();
-        Trade result = modelMapper.map(trade, Trade.class);
+        TradeEntity tradeEntity = tradeRepository.findById(id).get();
+        Trade result = modelMapper.map(tradeEntity, Trade.class);
         return result;
     }
 
@@ -106,8 +113,8 @@ public class FxServiceForJpa implements FxService {
             }
         });
 
-        com.mrtn.fx.jpa.entity.Trade trade = modelMapper.map(form, com.mrtn.fx.jpa.entity.Trade.class);
-        tradeRepository.save(trade);
+        TradeEntity tradeEntity = modelMapper.map(form, TradeEntity.class);
+        tradeRepository.save(tradeEntity);
     }
 
     /**
