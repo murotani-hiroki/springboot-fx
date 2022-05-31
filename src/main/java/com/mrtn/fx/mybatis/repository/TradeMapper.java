@@ -11,6 +11,7 @@ public interface TradeMapper {
     /** 削除 */
     int deleteByPrimaryKey(Integer id);
 
+
     /** 未使用 */
     int insert(TradeEntity record);
 
