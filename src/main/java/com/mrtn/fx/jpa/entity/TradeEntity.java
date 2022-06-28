@@ -37,7 +37,6 @@ public class TradeEntity {
     private CurrencyPairEntity currencyPair;
 
     /** Ask/Bid */
-    //TODO enum化する。
     private Integer tradeType;
 
     /** 数量 */

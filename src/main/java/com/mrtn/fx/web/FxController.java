@@ -1,10 +1,8 @@
 package com.mrtn.fx.web;
 
-import com.mrtn.fx.model.CurrencyPair;
-import com.mrtn.fx.model.Trade;
-import com.mrtn.fx.service.FxService;
-import com.mrtn.fx.service.FxServiceForJpa;
-import com.mrtn.fx.util.MessageUtil;
+import java.text.MessageFormat;
+import java.util.List;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,8 +15,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
-import java.text.MessageFormat;
-import java.util.List;
+import com.mrtn.fx.model.CurrencyPair;
+import com.mrtn.fx.model.Trade;
+import com.mrtn.fx.service.FxService;
+import com.mrtn.fx.util.MessageUtil;
 
 @Controller
 public class FxController {

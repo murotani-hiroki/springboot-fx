@@ -1,22 +1,21 @@
 package com.mrtn.fx.web;
 
-import org.hibernate.validator.constraintvalidation.HibernateConstraintValidatorContext;
+import java.util.Arrays;
+import java.util.List;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
-import java.util.Arrays;
-import java.util.List;
+
+import org.hibernate.validator.constraintvalidation.HibernateConstraintValidatorContext;
 
 // カスタムバリデーター
 public class CustomConstraintValidator implements ConstraintValidator<CustomContains, Object> {
 
-    private String message;
     private String label;
     private List<String> values;
 
     @Override
     public void initialize(CustomContains constraintAnnotation) {
-        message = constraintAnnotation.message();
         label = constraintAnnotation.label();
         values = Arrays.asList(constraintAnnotation.values());
     }

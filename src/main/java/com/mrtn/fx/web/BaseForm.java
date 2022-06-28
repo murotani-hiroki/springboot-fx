@@ -1,11 +1,9 @@
 package com.mrtn.fx.web;
 
-import lombok.Data;
-
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Pattern;
 import java.util.ArrayList;
 import java.util.List;
+
+import lombok.Data;
 
 @Data
 public abstract class BaseForm {
